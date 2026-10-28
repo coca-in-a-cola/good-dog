@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://tools/capture/f2_capture.gd" id="1_cap"]
+
+[node name="F2Capture" type="Node"]
+script = ExtResource("1_cap")

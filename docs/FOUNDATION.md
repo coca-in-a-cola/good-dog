@@ -1,6 +1,6 @@
 # Foundation boundary and ordered execution slices
 
-Only F1 (the command_overlay addon) is implemented. There is no game core: no CommandDirector, player, levels or gameplay. All final scope remains in ACCEPTANCE.md and the original source inventory. F1 alone is **not** the complete foundation and **not** the complete game.
+F1 (command_overlay addon, accepted) and the F2 source increment (shared core + greybox BARK cell, **implemented, not accepted**) exist. F2 still needs independent parent acceptance of its build and walkthrough evidence. GRAB/PLACE/JUMP, rooms, fall, finale and all later phases are not implemented. All final scope remains in ACCEPTANCE.md and the original source inventory. F1+F2 are **not** the complete game.
 
 ## F1 — portable command-overlay (first launch, 75-minute bound)
 
@@ -24,53 +24,72 @@ Godot project, standalone addon/resource/API and demo. Three background modes, r
 - Time: the overlay owns `Engine.time_scale` / `SceneTree.paused` only while active or thawing, and restores the values it captured. Other systems must not write either value while `Overlay.is_active()`. Systems that need real-time timers (the escalation ladder) use `create_timer(t, true, false, true)` or tick-based real time.
 - Audio: `Overlay.sfx_bus` selects the bus for the appearance sound. F5 sets it to a bus that bypasses the `Ambience`/`SFX` low-pass.
 
-### Concrete F2 extension contracts (to implement after F1 acceptance; not implemented now)
+## F2 — shared architectural core + playable BARK cell
+
+**Status: implemented source increment; F2 BLOCKED, not accepted.** The demonstrated menu interaction contrast, capture centering/traversal and headless audio teardown defects have focused repairs, but refreshed full-route pixels and exported warning → menu → START interaction still require parent acceptance. Historical evidence below describes its original source identity, not the repaired source. Private repair evidence is under `evidence/f2-repair/`. It is not self-accepted, and the architectural foundation counts as complete only after parent acceptance. Per-object details are in `docs/objects/*.md`.
+
+### Actual contracts (code is authoritative)
 
 ```gdscript
-# data/commands/*.tres
+# scripts/command.gd — data/commands/bark.tres
 class_name Command extends Resource
-@export var id: StringName
-@export var order_line: OverlayLine
-@export var hint_text: String                    # e.g. "PRESS [B] TO BARK"
-@export var ladder := PackedFloat32Array([20, 10, 5, 3, 2, 1])
-@export var escalation_lines: Array[OverlayLine] # index = rung 1..5 (rung 0 uses order_line)
-@export var success_line: OverlayLine
-@export var transform_step: int = -1             # TransformStep index applied on success, -1 none
-@export var completion_signal: StringName        # barked | grabbed | placed | pit_entered
+@export var id; order_line: OverlayLine; hint_text; ladder := [20,10,5,3,2,1]
+@export var escalation_lines: Array[OverlayLine]  # index 0 = rung 2 … index 4 = rung 6
+@export var success_line; transform_step := -1; completion_signal  # barked|grabbed|placed|pit_entered
+func line_for_rung(rung: int) -> OverlayLine
 
-# data/transform/*.tres (GDD §6 table, one per step 0–4)
+# scripts/transform_step.gd — data/transform/step_0..4.tres (GDD §6 rows)
 class_name TransformStep extends Resource
-@export var eye_height_m: float; @export var speed_mps: float; @export var fov_deg: float
-@export var max_look_up_deg: float; @export var bob_hz: float; @export var footstep_set: StringName
-@export var transition_time := 2.5; @export var transition_curve: Curve; @export var transition_sfx: AudioStream
+@export var index, eye_height_m, speed_mps, fov_deg, max_look_up_deg, bob_hz, bob_amplitude_m,
+		mouse_sensitivity_scale, footstep_set, transition_time := 2.5, transition_curve: Curve, transition_sfx
+func sample_transition(progress) -> float
 
 # scripts/command_director.gd — node on the level scene
 enum State { IDLE, ORDER_SHOWN, WAITING, SUCCESS, ESCALATE, FAIL }
-signal pressure_changed(level: int)        # 0–5 (GDD audio table rungs 1–6 map to levels 0–5)
-signal command_completed(id: StringName)
-signal failed
-func run(command: Command) -> void         # show order -> await Overlay.dismissed -> real-time rung timer
-func notify(completion: StringName) -> void  # from player/interactables signals; no per-frame polling
-# Rung timer starts only after dismissed; a completion while ORDER_SHOWN is ignored (overlay blocks input).
-# Off-order bark during WAITING of a non-bark command -> FLASH "QUIET." with no timer penalty.
-# Last-rung (1 s) expiry -> FAIL: BLACK "BAD DOG." -> GameState.fail().
+signal pressure_changed(level)            # 0–5 = rung index; GDD audio rung = level + 1
+signal command_started(id), command_succeeded(id)  # succeeded = timer stopped instantly
+signal command_completed(id), transform_requested(step)  # after the praise line is dismissed
+signal hint_changed(text), quiet_issued, failed, state_changed(state)
+func run(command); notify(completion); bind_source(obj, signal, completion); bind_interactable(item); stop()
+func get_remaining() -> float   # debug HUD (F3 key, debug builds) only; no visible countdown
 
-# scripts/game_state.gd — autoload
-signal state_changed(state: StringName)    # warning, menu, playing, failed, falling, finale
-func start_game() -> void; func fail() -> void; func enter_finale() -> void; func quit_to_menu() -> void
-# Always calls Overlay.force_hide() before scene changes; no progress persistence (GDD §4/§13).
+# scripts/game_state.gd — autoload GameState
+signal state_changed(state)     # boot, warning, menu, playing, failed (falling/finale reserved for F3)
+var clock: RealClock            # shared real-time clock; manual in tests/capture
+func show_warning(); quit_to_menu(); start_game(); fail(); request_pause() -> bool; resume(); run_away()
+func enter_falling(); enter_finale()   # F3 boundary stubs (state only)
 
-# PressureController / TransformController (adapters, Curve-driven, inspector-tunable)
-func set_pressure_level(level: int) -> void         # listens to pressure_changed
-func apply_step(step: TransformStep) -> void        # listens to command_completed; emits transform_step_changed(step)
-
-# Interactables: stick.gd emits grabbed; place_zone.gd emits placed; pit.gd emits pit_entered.
-# LeashConstraint: activate(center: Vector3); emits leash_pulled; ratchet max_d per GDD §7.
+# scripts/pressure_controller.gd   set_pressure_level(level); nudge(); reset(); values; pressure_applied(level, values)
+# scripts/transform_controller.gd  apply_step_index(i); apply_step(step); reset(); transform_step_changed / transform_finished
+# scripts/good_dog_player.gd       GoodDogPlayer extends Player (vendored ar-bh): barked, interacted, footstep(set);
+#                                  apply_transform_values(dict); set_eye_height(h); set_shake_trauma(t); controls_enabled; leash
+# scripts/interactables/interactable.gd  Interactable: completed(completion); completion_signal; complete() once; reset()
+# scripts/leash_constraint.gd      LeashConstraint: activate(center, start_pos); deactivate(); reset(); leash_pulled(dir);
+#                                  constrain_velocity(pos, vel); clamp_position(pos); on_rung(level); contract_on_rung=false
 ```
 
-## F2 — shared architectural foundation and BARK greybox (next Opus increment)
+### Rules the code enforces
+- The rung timer is real time (`GameState.clock`). It starts only on the overlay's `dismissed` for the line the director itself showed. `cancelled`, foreign lines with the same id, replaced lines and stray `dismissed` emissions never start it. An expired rung shows the next order and waits for its dismissal; rung 6 (FLASH) auto-dismisses after 0.6 s. When the 1 s rung expires, the director shows BLACK `BAD DOG.` and emits `failed` once, with no seventh rung.
+- The timer does not advance while the tree is paused (Esc), and it is unaffected by `Engine.time_scale` 0.05. Pause is refused while the overlay is active or thawing (`time_scale != 1`), so GameState never writes `paused` while the overlay owns it.
+- A valid completion stops the timer immediately (`SUCCESS`). Duplicate or stale completions in ORDER_SHOWN, SUCCESS or FAIL are ignored. An off-order bark in WAITING (or IDLE between orders) shows FLASH `QUIET.` with no penalty or reset. A new `run()` restarts the ladder at 20 s.
+- Restart and failure go through `GameState._change()`: `Overlay.force_hide()`, clear pause, curtain and mute, set `time_scale = 1`, release all held actions, then reload the level scene. That gives a new director (generation, timers and Overlay connections are disconnected in `_exit_tree`), new pressure, transform and player state, and no persistence. Failure shows BAD DOG for 2 s, then 3 s of muted black, then the menu.
+- Pressure (0–5) and transformation (0–4) are separate nodes and axes. PressureController reads `Overlay.reduce_flashes` and `Overlay.reduce_shake`; there are no duplicate flags. The menu toggles write the Overlay flags.
 
-After F1 acceptance: Command/TransformStep resources; signal-driven CommandDirector ladder and completions; GameState/menu/failure/restart lifecycle; player controller adapter (verified upstream license/revision, custom-code fallback only with recorded search); PressureController/TransformController contracts and data-driven adapters; interactable and leash extension boundaries. A playable BARK cell proves integration, including dismissal-B not counting as bark, each rung, pause and repeat restart. All shared-state/core contracts must be accepted before calling the architectural foundation complete.
+### BARK cell (scenes/level.tscn)
+Warning → menu (START, reduce flashes/shake, QUIT) → 3 s black prologue with lamp flicker → BLACK `BARK.` → `PRESS [B] TO BARK` → ladder (BARK. / BARK. / BARK. larger / BARK. NOW. per word / red-glow BARK. / FLASH BARK.) → B → `GOOD.` `DOG.` → transformation 1 (2.5 s, control kept) and the bars slide open into a corridor stub → later barks get QUIET. Esc gives OBEY / RUN AWAY. CSG + built-in lighting only.
+
+### Evidence produced in this run (not acceptance)
+- Native tests: 27 passed / 0 failed (16 F1 + 11 F2), exit 0, no error/warning/leak lines.
+- Portability: six steps exit 0, PASS.
+- Capture driver `tools/capture/f2_capture.gd` (headless logic run): all assertions OK, failures=0.
+- Linux export: `builds/f2/good-dog.x86_64` + `.pck`. Excluded paths: 0 packed. The exported runtime boots under Xvfb (`--quit-after 300`); the only diagnostics are the sandbox's missing ALSA device and the dummy-driver fallback.
+- Walkthrough (**PARTIAL, gate still open**): the Movie Maker capture on llvmpipe at 1920×1080 ran about 27 s wall per video second and was stopped by its own 1200 s `timeout` (exit 124) during rung 2 of the second (failure) run. The capture assertions passed up to that point. `evidence/f2/walkthrough_PARTIAL.mp4`, salvaged from the unfinalized AVI, has 1146 frames / 38.2 s, H.264 + AAC; volumedetect gives max −1.7 dB and mean −34.3 dB (signal, not a listening review). It covers warning → menu → prologue → BARK → B dismissal → rungs 1–3 → bark → GOOD. DOG. → transformation 1 + bars → QUIET → pause OBEY / RUN AWAY → fresh restart. It does **not** show the BAD DOG → silence → menu tail; the headless driver and tests cover that tail. A complete capture is parent-owned. Software Vulkan (llvmpipe) is not target-GPU evidence.
+
+### Remaining F2-adjacent limits (owned by later phases)
+- No inertia hook in the vendored controller (velocity is instant). Head bob, footstep signal and sensitivity are adapter-level, and there are no footstep sounds yet (F5).
+- PressureController's audio layers are data and values only. Metronome, heartbeat, tinnitus and hum sounds are F5; post-processing consumers are F6.
+- Leash: the post-move ratchet clamp is wired into GoodDogPlayer. Pre-move `constrain_velocity` integration, the physics wall-slide and the 60 s randomized regression are F3.
+- Interactable is a contract only. Stick, place zone and pit gameplay are F3.
 
 ## F3 — remaining gameplay (one coherent route)
 

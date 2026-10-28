@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="TransformStep" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://scripts/transform_step.gd" id="1_step"]
+
+[sub_resource type="Curve" id="Curve_ease"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[resource]
+script = ExtResource("1_step")
+index = 0
+eye_height_m = 1.7
+speed_mps = 3.0
+fov_deg = 75.0
+max_look_up_deg = 89.0
+bob_hz = 1.8
+bob_amplitude_m = 0.05
+mouse_sensitivity_scale = 1.0
+footstep_set = &"heavy_shoes"
+transition_time = 2.5
+transition_curve = SubResource("Curve_ease")

@@ -1,6 +1,12 @@
 # game-state-and-finale
 
-Original GDD sections: 5,12. Status: OPEN / not implemented.
+Original GDD sections: 5,12. Status: F2 IMPLEMENTED for warning/menu/prologue/BARK/failure/pause/restart (`scripts/game_state.gd`, `scenes/warning.tscn`, `scenes/main_menu.tscn`, `scenes/level.tscn`), parent acceptance pending. GRAB/PLACE/pit entry, the fall, finale and credits remain OPEN (F3); `enter_falling`/`enter_finale` only set state. `GameState.FINAL_LINES` preserves `CONGRATULATIONS!` / `YOU WERE A GOOD DOG!`.
+
+## Actual implementation (F2)
+
+- Every scene change calls `Overlay.force_hide()` first, then clears pause, curtain and mute, sets time_scale to 1 and releases held actions. A restart reloads the level, so director, pressure, transform and player are new. Nothing is persisted.
+- Esc → OBEY / RUN AWAY (no confirmation). Pause is refused while the overlay owns the world.
+- Tests: three menu/restart/failure cycles with connection-leak checks in `tests/test_f2_core.gd`.
 
 ## Responsibility and contract
 

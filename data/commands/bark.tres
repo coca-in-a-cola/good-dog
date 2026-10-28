@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="Command" load_steps=10 format=3]
+
+[ext_resource type="Script" path="res://scripts/command.gd" id="1_cmd"]
+[ext_resource type="Resource" path="res://data/lines/bark.tres" id="2_r1"]
+[ext_resource type="Resource" path="res://data/lines/bark_r2.tres" id="3_r2"]
+[ext_resource type="Resource" path="res://data/lines/bark_r3.tres" id="4_r3"]
+[ext_resource type="Resource" path="res://data/lines/bark_r4.tres" id="5_r4"]
+[ext_resource type="Resource" path="res://data/lines/bark_r5.tres" id="6_r5"]
+[ext_resource type="Resource" path="res://data/lines/bark_r6.tres" id="7_r6"]
+[ext_resource type="Resource" path="res://data/lines/good_dog_words.tres" id="8_good"]
+[ext_resource type="Script" path="res://addons/command_overlay/overlay_line.gd" id="9_line"]
+
+[resource]
+script = ExtResource("1_cmd")
+id = &"bark"
+order_line = ExtResource("2_r1")
+hint_text = "PRESS [B] TO BARK"
+ladder = PackedFloat32Array(20, 10, 5, 3, 2, 1)
+escalation_lines = Array[ExtResource("9_line")]([ExtResource("3_r2"), ExtResource("4_r3"), ExtResource("5_r4"), ExtResource("6_r5"), ExtResource("7_r6")])
+success_line = ExtResource("8_good")
+transform_step = 1
+completion_signal = &"barked"

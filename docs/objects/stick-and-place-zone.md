@@ -1,6 +1,6 @@
 # stick-and-place-zone
 
-Original GDD sections: 4,5. Status: OPEN / not implemented.
+Original GDD sections: 4,5. Status: OPEN (F3). F2 provides only the extension contract `scripts/interactables/interactable.gd`: `completed(completion)`, `completion_signal`, `complete()` fires once per arm, `reset()`, bound with `CommandDirector.bind_interactable()` and disconnected by `stop()`. Stick, place zone and pit subclasses with aim/zone/trigger logic are not implemented.
 
 ## Responsibility and contract
 

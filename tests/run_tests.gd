@@ -4,7 +4,7 @@ extends SceneTree
 ## Optional user arg after `--`: suite script paths (default: SUITES).
 ## Exit code 0 = all assertions passed, 1 = failures.
 
-const SUITES := ["res://tests/test_command_overlay.gd"]
+const SUITES := ["res://tests/test_command_overlay.gd", "res://tests/test_f2_core.gd"]
 
 
 func _initialize() -> void:

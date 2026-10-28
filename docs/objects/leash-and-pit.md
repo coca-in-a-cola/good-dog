@@ -1,6 +1,10 @@
 # leash-and-pit
 
-Original GDD sections: 7. Status: OPEN / not implemented.
+Original GDD sections: 7. Status: F2 CONTRACT only (`scripts/leash_constraint.gd`; the post-move clamp is wired in `GoodDogPlayer`). Pit room, trigger, fall, pre-move velocity integration and the 60 s randomized physics wall-slide regression remain OPEN (F3).
+
+## Actual contract (F2)
+
+`activate(center, start_pos)`, `deactivate()`, `reset()`, `constrain_velocity(pos, vel)` (removes the outward radial part, guards the zero vector, emits `leash_pulled`), `clamp_position(pos)` (ratchet `max_d = min(max_d, d)` and clamp), `on_rung()` (15% contraction only when `contract_on_rung`, default off). Pure-math unit tests are in `tests/test_f2_core.gd`; they do not replace the F3 physics regression.
 
 ## Responsibility and contract
 

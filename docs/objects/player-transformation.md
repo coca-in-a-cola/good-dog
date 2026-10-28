@@ -1,6 +1,13 @@
 # player-transformation
 
-Original GDD sections: 6. Status: OPEN / not implemented.
+Original GDD sections: 6. Status: F2 IMPLEMENTED core (`scripts/good_dog_player.gd` over vendored ar-bh `addons/basic_fps_controller`, `scenes/player.tscn`, `scripts/transform_step.gd`, `scripts/transform_controller.gd`, `data/transform/step_0..4.tres`), parent acceptance pending.
+
+## Actual implementation (F2)
+
+- Controller: ar-bh Basic FPS Controller (MIT, commit 7f50a91, byte-verified; see THIRD_PARTY.md), adapted by inheritance. Jump/sprint are disabled (actions exist with no key, `jump_velocity = 0`); the base has no crouch, wallrun, dash or fly.
+- TransformController blends all row values over 2.5 real seconds via the step's Curve. The blend pauses with Esc, control is kept, and the change is irreversible. The capsule height follows the eye height (+0.1 m), and growth is refused if `test_move` collides.
+- Values come from data only: eye 1.70/1.40/1.05/0.70/0.45; speed 3.0/3.6/4.4/5.3/6.2; FOV 75/78/82/86/90; look-up 89/70/55/40/30; bob 1.8→3.2 Hz with falling amplitude; sensitivity +10%/step; footstep sets.
+- Open: no acceleration/inertia hook (upstream sets velocity instantly). Footstep audio, the in-mouth stick view and breathing are F3/F5. The transition SFX, vignette pulse and FOV breathing are F6.
 
 ## Responsibility and contract
 
