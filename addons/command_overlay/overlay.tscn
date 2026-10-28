@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://addons/command_overlay/overlay.gd" id="1_overlay"]
+
+[node name="Overlay" type="CanvasLayer"]
+process_mode = 3
+layer = 100
+script = ExtResource("1_overlay")

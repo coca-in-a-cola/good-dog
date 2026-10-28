@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="OverlayLine" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://addons/command_overlay/overlay_line.gd" id="1_line"]
+
+[resource]
+script = ExtResource("1_line")
+id = &"now_flash"
+text = "NOW."
+mode = 2
+dismiss = 1
+auto_hide_after = 0.6

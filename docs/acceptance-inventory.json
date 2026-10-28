@@ -1,0 +1,2595 @@
+[
+  {
+    "source_block_id": "097dd368-36e4-4850-961b-6027ca4cec19",
+    "section": "",
+    "type": "paragraph",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "b1308f62-96e2-4ac1-997b-a1e8787a9785",
+    "section": "1. Обзор",
+    "type": "heading_2",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "07b56700-1369-44b0-8289-70c8f22f6207",
+    "section": "1. Обзор",
+    "type": "paragraph",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "cb9ee1b8-ebb4-4705-9e2c-96ee57fc11c2",
+    "section": "1. Обзор",
+    "type": "table",
+    "status": "not_implemented",
+    "source_children": [
+      "cd068151-9735-456e-9733-6f1e56b76884",
+      "6b858447-fb59-41ca-9988-5029ba7b0661",
+      "bfad2b3f-871d-42ca-9e6c-ddbd94848ab2",
+      "e4b56e31-8582-4f57-baae-edbd15961778",
+      "246d3cfc-87a0-4fb6-be57-f2ce85519899",
+      "1ad97aae-7c64-4c0a-8577-1c3e7edb0c75",
+      "296037ca-a54b-4c7c-8d8b-3696cbdb459f",
+      "f5579506-9590-4ed9-9d63-f4a6c563906e",
+      "491bfdbe-130a-438b-9bed-7acab0f043b6"
+    ]
+  },
+  {
+    "source_block_id": "cd068151-9735-456e-9733-6f1e56b76884",
+    "section": "1. Обзор",
+    "type": "table_row",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "6b858447-fb59-41ca-9988-5029ba7b0661",
+    "section": "1. Обзор",
+    "type": "table_row",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "bfad2b3f-871d-42ca-9e6c-ddbd94848ab2",
+    "section": "1. Обзор",
+    "type": "table_row",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "e4b56e31-8582-4f57-baae-edbd15961778",
+    "section": "1. Обзор",
+    "type": "table_row",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "246d3cfc-87a0-4fb6-be57-f2ce85519899",
+    "section": "1. Обзор",
+    "type": "table_row",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "1ad97aae-7c64-4c0a-8577-1c3e7edb0c75",
+    "section": "1. Обзор",
+    "type": "table_row",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "296037ca-a54b-4c7c-8d8b-3696cbdb459f",
+    "section": "1. Обзор",
+    "type": "table_row",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "f5579506-9590-4ed9-9d63-f4a6c563906e",
+    "section": "1. Обзор",
+    "type": "table_row",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "491bfdbe-130a-438b-9bed-7acab0f043b6",
+    "section": "1. Обзор",
+    "type": "table_row",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "c43abab7-cdbb-4d59-9241-7240ec0414ea",
+    "section": "1. Обзор",
+    "type": "heading_3",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "4e2b9633-30f9-4389-9f90-d96c5fcd8962",
+    "section": "1. Обзор",
+    "type": "numbered_list_item",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "c69f7556-b12f-404c-a701-2c153b47f140",
+    "section": "1. Обзор",
+    "type": "numbered_list_item",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "3b569d50-2725-4168-9be5-2fd735d29c30",
+    "section": "1. Обзор",
+    "type": "numbered_list_item",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "c8680368-2576-437e-9eb2-fe488a94776c",
+    "section": "1. Обзор",
+    "type": "numbered_list_item",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "cc0679b8-57fd-4b99-bd97-0839964a6ca3",
+    "section": "1. Обзор",
+    "type": "numbered_list_item",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "2b430c97-de51-4f46-8b08-39199d430891",
+    "section": "1. Обзор",
+    "type": "numbered_list_item",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "81569dc5-22df-4fb3-948b-ce5cc4f07fc6",
+    "section": "2. Принципы разработки и стек",
+    "type": "heading_2",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "7f655bc5-3aa2-4bf7-9b9e-fce243014899",
+    "section": "2. Принципы разработки и стек",
+    "type": "paragraph",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "837995f0-8856-4730-9a90-ab50de5fb6f6",
+    "section": "2. Принципы разработки и стек",
+    "type": "heading_3",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "91317475-ebb4-42ba-8742-402fb92f60bb",
+    "section": "2. Принципы разработки и стек",
+    "type": "paragraph",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "4b3b3abc-1b14-47b6-97e1-083fb1716c58",
+    "section": "2. Принципы разработки и стек",
+    "type": "numbered_list_item",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "dbc88dd0-034f-4e48-ac34-48033cd9a9da",
+    "section": "2. Принципы разработки и стек",
+    "type": "numbered_list_item",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "12a11eef-6712-4949-a97f-a9ee5d074161",
+    "section": "2. Принципы разработки и стек",
+    "type": "numbered_list_item",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "fd280038-cc9c-4abd-ae71-6feed4e31891",
+    "section": "2. Принципы разработки и стек",
+    "type": "numbered_list_item",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "14a0234d-6686-4800-b398-fd44639bac8e",
+    "section": "2. Принципы разработки и стек",
+    "type": "numbered_list_item",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "504dbef0-d301-48d1-a612-9f469f6f8995",
+    "section": "2. Принципы разработки и стек",
+    "type": "numbered_list_item",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "2bebfa89-19ff-4e95-a041-c5b12be3b2df",
+    "section": "2. Принципы разработки и стек",
+    "type": "heading_3",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "1c5cb2d6-fe79-4014-a949-a634dd280218",
+    "section": "2. Принципы разработки и стек",
+    "type": "bulleted_list_item",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "5516c211-6f2e-4fcc-a0cb-72169f2ad364",
+    "section": "2. Принципы разработки и стек",
+    "type": "bulleted_list_item",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "8e11592d-afd5-4951-ade8-a9f5581b92ae",
+    "section": "2. Принципы разработки и стек",
+    "type": "bulleted_list_item",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "177b0b74-96da-4541-b9a4-668f20912484",
+    "section": "2. Принципы разработки и стек",
+    "type": "heading_3",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "6611afc1-a009-47bf-921b-3d56e4fea6f9",
+    "section": "2. Принципы разработки и стек",
+    "type": "paragraph",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "3cd326d2-8028-4c3a-8fe7-eb46672b4ada",
+    "section": "2. Принципы разработки и стек",
+    "type": "heading_3",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "46c24bf1-0c31-4c62-b2b3-12eecfae3cc8",
+    "section": "2. Принципы разработки и стек",
+    "type": "table",
+    "status": "not_implemented",
+    "source_children": [
+      "75c8d0a4-16bd-445b-9b83-61086a019cd9",
+      "7accd0ff-16c7-41b2-8955-b3b8d48c2450",
+      "0537b768-1f01-471f-b6b4-a808564e5d36",
+      "9d4b3359-1a33-4d04-8f3f-71000b5d218c",
+      "07ea26af-ee96-472a-8e4b-4a982c1c4e9c",
+      "c27619a6-c1f1-4455-a3f8-8d63a855890f",
+      "c5d9571e-70a8-41d9-b774-1ece1202e14f",
+      "8129bae8-102d-4566-88a4-5a12fff2975a",
+      "0299b528-404b-4405-93e2-2c92537bd175"
+    ]
+  },
+  {
+    "source_block_id": "75c8d0a4-16bd-445b-9b83-61086a019cd9",
+    "section": "2. Принципы разработки и стек",
+    "type": "table_row",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "7accd0ff-16c7-41b2-8955-b3b8d48c2450",
+    "section": "2. Принципы разработки и стек",
+    "type": "table_row",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "0537b768-1f01-471f-b6b4-a808564e5d36",
+    "section": "2. Принципы разработки и стек",
+    "type": "table_row",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "9d4b3359-1a33-4d04-8f3f-71000b5d218c",
+    "section": "2. Принципы разработки и стек",
+    "type": "table_row",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "07ea26af-ee96-472a-8e4b-4a982c1c4e9c",
+    "section": "2. Принципы разработки и стек",
+    "type": "table_row",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "c27619a6-c1f1-4455-a3f8-8d63a855890f",
+    "section": "2. Принципы разработки и стек",
+    "type": "table_row",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "c5d9571e-70a8-41d9-b774-1ece1202e14f",
+    "section": "2. Принципы разработки и стек",
+    "type": "table_row",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "8129bae8-102d-4566-88a4-5a12fff2975a",
+    "section": "2. Принципы разработки и стек",
+    "type": "table_row",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "0299b528-404b-4405-93e2-2c92537bd175",
+    "section": "2. Принципы разработки и стек",
+    "type": "table_row",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "73663d83-549c-4826-b4fd-eb9f19739dfc",
+    "section": "3. Модуль полноэкранного текста command_overlay",
+    "type": "heading_2",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "f4910448-3df1-4038-882b-aae71a5647ce",
+    "section": "3. Модуль полноэкранного текста command_overlay",
+    "type": "paragraph",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "b428724f-72e4-4a18-9bed-8e002af6e784",
+    "section": "3. Модуль полноэкранного текста command_overlay",
+    "type": "heading_3",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "dc4ee92a-d2a3-4dd7-bab2-efbbaf8c1200",
+    "section": "3. Модуль полноэкранного текста command_overlay",
+    "type": "bulleted_list_item",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "17c8a6cc-acd9-4b84-91b9-c48e13e6ca61",
+    "section": "3. Модуль полноэкранного текста command_overlay",
+    "type": "bulleted_list_item",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "0300bc2d-6473-4fc6-a800-a42a16206320",
+    "section": "3. Модуль полноэкранного текста command_overlay",
+    "type": "bulleted_list_item",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "25a33087-3ca1-4e3e-b7ae-9a93f8b90c88",
+    "section": "3. Модуль полноэкранного текста command_overlay",
+    "type": "bulleted_list_item",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "69523d96-dd55-4b3a-a970-6eb4c36983a4",
+    "section": "3. Модуль полноэкранного текста command_overlay",
+    "type": "bulleted_list_item",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "07f4b1c0-05cc-42eb-9c23-f13e254c6e14",
+    "section": "3. Модуль полноэкранного текста command_overlay",
+    "type": "heading_3",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "cd806f6f-356e-4b5f-bc8d-c28ac3b51b50",
+    "section": "3. Модуль полноэкранного текста command_overlay",
+    "type": "table",
+    "status": "not_implemented",
+    "source_children": [
+      "93db2ab8-6474-471d-a3de-058bc2db644b",
+      "6b6005ab-60b2-455a-84b9-d3b3850a7b58",
+      "2295d19e-f72c-45ab-a875-29c11c756306",
+      "99e250cd-3420-4fdb-a543-8adaf0884769",
+      "13baf84b-e419-4bd5-99c6-16431544fc78",
+      "e1681d4d-5e7e-4f0d-81d4-c7b202627894",
+      "8e251107-1a8a-439e-8eee-4d722bcbdc1f"
+    ]
+  },
+  {
+    "source_block_id": "93db2ab8-6474-471d-a3de-058bc2db644b",
+    "section": "3. Модуль полноэкранного текста command_overlay",
+    "type": "table_row",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "6b6005ab-60b2-455a-84b9-d3b3850a7b58",
+    "section": "3. Модуль полноэкранного текста command_overlay",
+    "type": "table_row",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "2295d19e-f72c-45ab-a875-29c11c756306",
+    "section": "3. Модуль полноэкранного текста command_overlay",
+    "type": "table_row",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "99e250cd-3420-4fdb-a543-8adaf0884769",
+    "section": "3. Модуль полноэкранного текста command_overlay",
+    "type": "table_row",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "13baf84b-e419-4bd5-99c6-16431544fc78",
+    "section": "3. Модуль полноэкранного текста command_overlay",
+    "type": "table_row",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "e1681d4d-5e7e-4f0d-81d4-c7b202627894",
+    "section": "3. Модуль полноэкранного текста command_overlay",
+    "type": "table_row",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "8e251107-1a8a-439e-8eee-4d722bcbdc1f",
+    "section": "3. Модуль полноэкранного текста command_overlay",
+    "type": "table_row",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "a8ec5641-28fc-42f8-a817-bf0d73122c97",
+    "section": "3. Модуль полноэкранного текста command_overlay",
+    "type": "heading_3",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "78cda82d-7834-4246-b98c-74e97890bc24",
+    "section": "3. Модуль полноэкранного текста command_overlay",
+    "type": "table",
+    "status": "not_implemented",
+    "source_children": [
+      "bb63fff8-eefd-43f6-a79d-4cfdb208ba5c",
+      "96d6cf51-6193-44bb-b1db-31e028d25a1d",
+      "bbf521e6-e40b-4669-9374-1413fd3f94c6",
+      "36300b60-f4a8-44b0-aac9-4bdac312b44d"
+    ]
+  },
+  {
+    "source_block_id": "bb63fff8-eefd-43f6-a79d-4cfdb208ba5c",
+    "section": "3. Модуль полноэкранного текста command_overlay",
+    "type": "table_row",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "96d6cf51-6193-44bb-b1db-31e028d25a1d",
+    "section": "3. Модуль полноэкранного текста command_overlay",
+    "type": "table_row",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "bbf521e6-e40b-4669-9374-1413fd3f94c6",
+    "section": "3. Модуль полноэкранного текста command_overlay",
+    "type": "table_row",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "36300b60-f4a8-44b0-aac9-4bdac312b44d",
+    "section": "3. Модуль полноэкранного текста command_overlay",
+    "type": "table_row",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "91cf5754-68e7-4361-b497-0a50f2006703",
+    "section": "3. Модуль полноэкранного текста command_overlay",
+    "type": "heading_3",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "6c8cfb74-b970-40e1-9df0-5c8afeb7d710",
+    "section": "3. Модуль полноэкранного текста command_overlay",
+    "type": "numbered_list_item",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "b2e7d1f9-07df-4c00-bc8d-3d466a28f2f4",
+    "section": "3. Модуль полноэкранного текста command_overlay",
+    "type": "numbered_list_item",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "736a72ca-51ed-4bbf-bbe2-0cee5e35972e",
+    "section": "3. Модуль полноэкранного текста command_overlay",
+    "type": "numbered_list_item",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "1660dff2-53ab-4981-b843-1d627968d64e",
+    "section": "3. Модуль полноэкранного текста command_overlay",
+    "type": "heading_3",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "498ce7f9-8949-4729-a5bd-ad022931ac93",
+    "section": "3. Модуль полноэкранного текста command_overlay",
+    "type": "bulleted_list_item",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "c5a03a81-5ccf-4efc-b45a-b0d2908b1a6c",
+    "section": "3. Модуль полноэкранного текста command_overlay",
+    "type": "bulleted_list_item",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "7c66cfa1-1bed-437a-a003-71ed7f432fee",
+    "section": "3. Модуль полноэкранного текста command_overlay",
+    "type": "bulleted_list_item",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "3127cd76-71a2-4163-a4ad-d035430f382b",
+    "section": "3. Модуль полноэкранного текста command_overlay",
+    "type": "bulleted_list_item",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "30a292a0-3606-4086-975a-4858b88e6b8d",
+    "section": "3. Модуль полноэкранного текста command_overlay",
+    "type": "heading_3",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "46b02b7e-9621-4e52-b66d-3bbe7a708f92",
+    "section": "3. Модуль полноэкранного текста command_overlay",
+    "type": "code",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "a2c16e8e-2e83-4442-afc0-246a7a473e64",
+    "section": "3. Модуль полноэкранного текста command_overlay",
+    "type": "paragraph",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "bf812765-43eb-4a18-a88c-cbfb6acb5a34",
+    "section": "3. Модуль полноэкранного текста command_overlay",
+    "type": "heading_3",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "bbc121c8-1564-4005-af95-3f2bf84892be",
+    "section": "3. Модуль полноэкранного текста command_overlay",
+    "type": "bulleted_list_item",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "452b57fe-b064-40cc-ae66-2c41c2b269ba",
+    "section": "3. Модуль полноэкранного текста command_overlay",
+    "type": "bulleted_list_item",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "d56bf5ca-fbf0-4e5b-8a9d-2dc77e7a443e",
+    "section": "3. Модуль полноэкранного текста command_overlay",
+    "type": "bulleted_list_item",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "685a7ab3-4b54-431a-8dcc-27a27605b586",
+    "section": "3. Модуль полноэкранного текста command_overlay",
+    "type": "bulleted_list_item",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "853ae795-2200-47ec-b164-2c744e343aa3",
+    "section": "4. Система приказов и давление временем",
+    "type": "heading_2",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "6804972a-9902-4dc9-9545-98af62c6644a",
+    "section": "4. Система приказов и давление временем",
+    "type": "paragraph",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "04bd5314-b636-4b43-8c09-fded304bc456",
+    "section": "4. Система приказов и давление временем",
+    "type": "code",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "0397db14-24a4-4fdf-b5ed-7130447700e3",
+    "section": "4. Система приказов и давление временем",
+    "type": "paragraph",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "bd4bf496-d8ab-4e01-9a6e-425cd98f5804",
+    "section": "4. Система приказов и давление временем",
+    "type": "heading_3",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "3b3282ec-b773-4f9a-9afc-8ce8fb700ffb",
+    "section": "4. Система приказов и давление временем",
+    "type": "table",
+    "status": "not_implemented",
+    "source_children": [
+      "a5e2a263-b323-4394-931e-abc6335f180a",
+      "4664c461-1b21-4e7a-bfa9-67e704d18ded",
+      "1e4f0880-336d-469c-abaa-f975421f0026",
+      "87a27ff3-ad05-48a1-bd75-cee97de37b1a",
+      "33e739ac-535b-4337-bdc4-897a234f04c6",
+      "e4864728-9e90-48c7-ba0a-485bb8bc30d9",
+      "d235dd1a-6630-4574-bf8b-ac4fc89946db",
+      "f4381232-64f7-49c0-b953-2b7a5f0a88e8"
+    ]
+  },
+  {
+    "source_block_id": "a5e2a263-b323-4394-931e-abc6335f180a",
+    "section": "4. Система приказов и давление временем",
+    "type": "table_row",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "4664c461-1b21-4e7a-bfa9-67e704d18ded",
+    "section": "4. Система приказов и давление временем",
+    "type": "table_row",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "1e4f0880-336d-469c-abaa-f975421f0026",
+    "section": "4. Система приказов и давление временем",
+    "type": "table_row",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "87a27ff3-ad05-48a1-bd75-cee97de37b1a",
+    "section": "4. Система приказов и давление временем",
+    "type": "table_row",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "33e739ac-535b-4337-bdc4-897a234f04c6",
+    "section": "4. Система приказов и давление временем",
+    "type": "table_row",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "e4864728-9e90-48c7-ba0a-485bb8bc30d9",
+    "section": "4. Система приказов и давление временем",
+    "type": "table_row",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "d235dd1a-6630-4574-bf8b-ac4fc89946db",
+    "section": "4. Система приказов и давление временем",
+    "type": "table_row",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "f4381232-64f7-49c0-b953-2b7a5f0a88e8",
+    "section": "4. Система приказов и давление временем",
+    "type": "table_row",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "8e459bd2-0ab6-4095-a8a5-d3deeb15440e",
+    "section": "4. Система приказов и давление временем",
+    "type": "paragraph",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "07ad6323-3ffd-4e85-a9e5-b35a1c122701",
+    "section": "4. Система приказов и давление временем",
+    "type": "heading_3",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "581e4979-5405-499b-9339-708a76614cf2",
+    "section": "4. Система приказов и давление временем",
+    "type": "paragraph",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "b9c3862f-4e89-4fa2-bbb6-e72309c37ea9",
+    "section": "4. Система приказов и давление временем",
+    "type": "table",
+    "status": "not_implemented",
+    "source_children": [
+      "1d0dce61-a69e-441e-9d3b-92f98ea207f2",
+      "57ac90f4-e66d-4290-b22e-96da677b6071",
+      "c94b16c5-3481-4804-843b-2aed9f6dbdab",
+      "1b1f7ae2-cd5d-4bb5-a862-6620c275538f",
+      "a5eaece5-8249-4eab-939a-40bb426f14ba"
+    ]
+  },
+  {
+    "source_block_id": "1d0dce61-a69e-441e-9d3b-92f98ea207f2",
+    "section": "4. Система приказов и давление временем",
+    "type": "table_row",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "57ac90f4-e66d-4290-b22e-96da677b6071",
+    "section": "4. Система приказов и давление временем",
+    "type": "table_row",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "c94b16c5-3481-4804-843b-2aed9f6dbdab",
+    "section": "4. Система приказов и давление временем",
+    "type": "table_row",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "1b1f7ae2-cd5d-4bb5-a862-6620c275538f",
+    "section": "4. Система приказов и давление временем",
+    "type": "table_row",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "a5eaece5-8249-4eab-939a-40bb426f14ba",
+    "section": "4. Система приказов и давление временем",
+    "type": "table_row",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "0060a173-2efa-4b5c-9ce7-9df51cea6564",
+    "section": "4. Система приказов и давление временем",
+    "type": "heading_3",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "32195eba-6594-4ccd-8b1b-1246d55667da",
+    "section": "4. Система приказов и давление временем",
+    "type": "bulleted_list_item",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "5b7c36f6-63aa-4d1d-b58e-68940fa49fbf",
+    "section": "4. Система приказов и давление временем",
+    "type": "bulleted_list_item",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "ba02f094-91f0-4a27-834d-c4ba8a13efb4",
+    "section": "4. Система приказов и давление временем",
+    "type": "bulleted_list_item",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "77dd1e76-bea6-4387-866e-ddd3257096fa",
+    "section": "4. Система приказов и давление временем",
+    "type": "bulleted_list_item",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "581fb7f7-0720-410e-b7d2-373cede9d232",
+    "section": "4. Система приказов и давление временем",
+    "type": "bulleted_list_item",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "44652041-60c9-49f8-8bba-9bb616b461c3",
+    "section": "4. Система приказов и давление временем",
+    "type": "heading_3",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "bffb7793-969e-417e-8f92-a8e42bde26e4",
+    "section": "4. Система приказов и давление временем",
+    "type": "bulleted_list_item",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "ca5993f5-d552-4ae6-be11-fbf9fa3b343a",
+    "section": "4. Система приказов и давление временем",
+    "type": "bulleted_list_item",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "f1e4f878-3d11-43f6-b7df-845e0dec59bf",
+    "section": "4. Система приказов и давление временем",
+    "type": "bulleted_list_item",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "dfa18c86-8fd0-42f4-877f-041287728840",
+    "section": "4. Система приказов и давление временем",
+    "type": "bulleted_list_item",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "e41eee13-f4d5-456c-a8af-d749f873f8fb",
+    "section": "5. Сценарий и поток игры",
+    "type": "heading_2",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "7e9dd778-e2c1-436d-bd99-7bd3cddd6707",
+    "section": "5. Сценарий и поток игры",
+    "type": "paragraph",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "9f87a7fb-d09f-411d-a8e5-51fe82504df2",
+    "section": "5. Сценарий и поток игры",
+    "type": "table",
+    "status": "not_implemented",
+    "source_children": [
+      "8246f422-c044-477a-81e3-5c2f939c849c",
+      "ac80ecfd-17c5-4750-99a4-7b577a74708e",
+      "70bf00fc-cdd3-4bb1-b0ef-182361d0ea52",
+      "e5e13349-e00a-431c-8ef3-5d4ae8c8f590",
+      "1c77a0ac-113d-4f95-81df-d34c803a0be9",
+      "ee25c666-6c93-4c6b-b8f9-b2b324e80b67",
+      "058cf5a6-5f47-4b6d-aeb4-2febcc3baa46",
+      "428e723e-a2c2-4305-82b2-60f9e0bfd9ff",
+      "e14a3203-3e0d-4d76-8deb-dd4df3242ad4",
+      "a3246f80-e1ff-4602-b4d0-a5bb8b739c62",
+      "8539791a-0825-4d5c-b064-17c8e0a15725",
+      "b700e60e-4a7e-4266-8825-1be74ecf0428",
+      "142f9239-bc4c-46a9-9681-1b231c6fd66c",
+      "b405f1d6-93b0-442c-afd8-03e3894bdb3b",
+      "f279c15f-0de2-4634-8641-6b978966ffff",
+      "5e4c1d6d-84ea-45c0-be0b-eeff2cbd1420"
+    ]
+  },
+  {
+    "source_block_id": "8246f422-c044-477a-81e3-5c2f939c849c",
+    "section": "5. Сценарий и поток игры",
+    "type": "table_row",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "ac80ecfd-17c5-4750-99a4-7b577a74708e",
+    "section": "5. Сценарий и поток игры",
+    "type": "table_row",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "70bf00fc-cdd3-4bb1-b0ef-182361d0ea52",
+    "section": "5. Сценарий и поток игры",
+    "type": "table_row",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "e5e13349-e00a-431c-8ef3-5d4ae8c8f590",
+    "section": "5. Сценарий и поток игры",
+    "type": "table_row",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "1c77a0ac-113d-4f95-81df-d34c803a0be9",
+    "section": "5. Сценарий и поток игры",
+    "type": "table_row",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "ee25c666-6c93-4c6b-b8f9-b2b324e80b67",
+    "section": "5. Сценарий и поток игры",
+    "type": "table_row",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "058cf5a6-5f47-4b6d-aeb4-2febcc3baa46",
+    "section": "5. Сценарий и поток игры",
+    "type": "table_row",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "428e723e-a2c2-4305-82b2-60f9e0bfd9ff",
+    "section": "5. Сценарий и поток игры",
+    "type": "table_row",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "e14a3203-3e0d-4d76-8deb-dd4df3242ad4",
+    "section": "5. Сценарий и поток игры",
+    "type": "table_row",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "a3246f80-e1ff-4602-b4d0-a5bb8b739c62",
+    "section": "5. Сценарий и поток игры",
+    "type": "table_row",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "8539791a-0825-4d5c-b064-17c8e0a15725",
+    "section": "5. Сценарий и поток игры",
+    "type": "table_row",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "b700e60e-4a7e-4266-8825-1be74ecf0428",
+    "section": "5. Сценарий и поток игры",
+    "type": "table_row",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "142f9239-bc4c-46a9-9681-1b231c6fd66c",
+    "section": "5. Сценарий и поток игры",
+    "type": "table_row",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "b405f1d6-93b0-442c-afd8-03e3894bdb3b",
+    "section": "5. Сценарий и поток игры",
+    "type": "table_row",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "f279c15f-0de2-4634-8641-6b978966ffff",
+    "section": "5. Сценарий и поток игры",
+    "type": "table_row",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "5e4c1d6d-84ea-45c0-be0b-eeff2cbd1420",
+    "section": "5. Сценарий и поток игры",
+    "type": "table_row",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "e846afa6-07cb-4834-a0bf-c40da7bb3a21",
+    "section": "5. Сценарий и поток игры",
+    "type": "heading_3",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "1a540ece-88ed-4db0-9f14-5edf335cddc6",
+    "section": "5. Сценарий и поток игры",
+    "type": "bulleted_list_item",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "30b45c6a-66fe-435b-8803-f1a8398b136b",
+    "section": "5. Сценарий и поток игры",
+    "type": "bulleted_list_item",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "c568f78b-c639-4c36-9236-b254bfaad3cd",
+    "section": "5. Сценарий и поток игры",
+    "type": "heading_3",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "60ac7e39-10a2-44ce-a127-e77954c8df17",
+    "section": "5. Сценарий и поток игры",
+    "type": "paragraph",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "f19113da-8cc6-4ea9-a3e9-f8b60cd7fc70",
+    "section": "6. Трансформация игрока",
+    "type": "heading_2",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "672fad83-3b58-4ad1-a56f-51151d3d2612",
+    "section": "6. Трансформация игрока",
+    "type": "paragraph",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "d18d264e-9311-4b33-9313-26a93435507f",
+    "section": "6. Трансформация игрока",
+    "type": "table",
+    "status": "not_implemented",
+    "source_children": [
+      "edf9db41-fc78-47e9-81f3-781b70b2338a",
+      "7fd2c478-4ed1-4171-b499-13e025690fcd",
+      "aac7ba15-464b-4f63-9b71-0ccab086a36f",
+      "67eb81b8-5932-44aa-8707-1204cf9d1aa5",
+      "a99c5915-3e42-4d7a-9ddf-a9580f50b347",
+      "6b153627-6e0d-4380-867b-21000b9e4785"
+    ]
+  },
+  {
+    "source_block_id": "edf9db41-fc78-47e9-81f3-781b70b2338a",
+    "section": "6. Трансформация игрока",
+    "type": "table_row",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "7fd2c478-4ed1-4171-b499-13e025690fcd",
+    "section": "6. Трансформация игрока",
+    "type": "table_row",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "aac7ba15-464b-4f63-9b71-0ccab086a36f",
+    "section": "6. Трансформация игрока",
+    "type": "table_row",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "67eb81b8-5932-44aa-8707-1204cf9d1aa5",
+    "section": "6. Трансформация игрока",
+    "type": "table_row",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "a99c5915-3e42-4d7a-9ddf-a9580f50b347",
+    "section": "6. Трансформация игрока",
+    "type": "table_row",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "6b153627-6e0d-4380-867b-21000b9e4785",
+    "section": "6. Трансформация игрока",
+    "type": "table_row",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "2db886cc-6cf8-4126-9e82-7bf64578f2fc",
+    "section": "6. Трансформация игрока",
+    "type": "heading_3",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "738b50ae-c283-4f60-8d67-15af0982e5bb",
+    "section": "6. Трансформация игрока",
+    "type": "bulleted_list_item",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "5622cf87-8768-4d63-a119-f17afd3ddb9f",
+    "section": "6. Трансформация игрока",
+    "type": "bulleted_list_item",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "64670007-cb7c-4ebf-9cb7-1eccfa49104d",
+    "section": "6. Трансформация игрока",
+    "type": "bulleted_list_item",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "881db096-4178-42aa-bb68-ecb526821998",
+    "section": "6. Трансформация игрока",
+    "type": "bulleted_list_item",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "1fff3596-49c3-4919-93fb-82877690e5be",
+    "section": "6. Трансформация игрока",
+    "type": "bulleted_list_item",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "9e7015cc-dd9d-4d3d-af5d-c6aa8ffac383",
+    "section": "6. Трансформация игрока",
+    "type": "bulleted_list_item",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "6bf6a811-58f4-40bf-a577-d7a5d4dfba51",
+    "section": "6. Трансформация игрока",
+    "type": "bulleted_list_item",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "d8cd40c3-323c-4f74-b5bf-bd86aaf99a16",
+    "section": "6. Трансформация игрока",
+    "type": "bulleted_list_item",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "a5289ee3-2aff-477e-8fec-2bb164c0d06a",
+    "section": "6. Трансформация игрока",
+    "type": "bulleted_list_item",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "2dbeab39-abb2-40ee-98cd-a9514ffcad34",
+    "section": "6. Трансформация игрока",
+    "type": "heading_3",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "09c93c21-7528-4958-abdb-c88d35ad38d4",
+    "section": "6. Трансформация игрока",
+    "type": "bulleted_list_item",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "39024a2b-132c-410e-9a9f-488e5daac71c",
+    "section": "6. Трансформация игрока",
+    "type": "bulleted_list_item",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "5ae73e13-323c-453e-90f0-c8d2322d210e",
+    "section": "6. Трансформация игрока",
+    "type": "bulleted_list_item",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "adf47a21-8992-49ef-b069-5ec88b47c5bd",
+    "section": "7. Финальное задание: яма",
+    "type": "heading_2",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "f288dcf8-ae9a-4622-823f-520187737124",
+    "section": "7. Финальное задание: яма",
+    "type": "paragraph",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "1137e99f-1401-4bf0-848e-f995ea25bf5e",
+    "section": "7. Финальное задание: яма",
+    "type": "heading_3",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "13c471dc-5472-45e3-a56c-e35d1983f52a",
+    "section": "7. Финальное задание: яма",
+    "type": "bulleted_list_item",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "e6629cdb-4ecf-4e38-ae20-d5dd76db81e7",
+    "section": "7. Финальное задание: яма",
+    "type": "bulleted_list_item",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "bf57a391-e75c-4c2a-a4ca-19286146e2f9",
+    "section": "7. Финальное задание: яма",
+    "type": "bulleted_list_item",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "5b709cba-fa99-4943-a573-01f01fc83aa0",
+    "section": "7. Финальное задание: яма",
+    "type": "bulleted_list_item",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "a1ab09dd-026f-49ba-b7b1-ba24be446314",
+    "section": "7. Финальное задание: яма",
+    "type": "heading_3",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "4c9038de-338e-4f8b-9bd0-0e9d451ee056",
+    "section": "7. Финальное задание: яма",
+    "type": "numbered_list_item",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "12a3a924-33e0-4fb0-970b-b58c4fee87b3",
+    "section": "7. Финальное задание: яма",
+    "type": "numbered_list_item",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "5b032a80-a796-4911-8bf3-45c571480113",
+    "section": "7. Финальное задание: яма",
+    "type": "numbered_list_item",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "336b5ae8-45b2-4016-921c-117ce27fc97d",
+    "section": "7. Финальное задание: яма",
+    "type": "numbered_list_item",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "c20b2ef2-f07f-4251-b8eb-7cb84e0c914f",
+    "section": "7. Финальное задание: яма",
+    "type": "heading_3",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "ec923750-1566-4f20-b040-d12e22fadb41",
+    "section": "7. Финальное задание: яма",
+    "type": "bulleted_list_item",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "03a0b214-72c0-402b-8fce-8c4be95d6d86",
+    "section": "7. Финальное задание: яма",
+    "type": "bulleted_list_item",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "b54c5c27-80ed-4683-98f0-5ee683c20226",
+    "section": "7. Финальное задание: яма",
+    "type": "bulleted_list_item",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "90cf7775-efae-4e2d-9b09-19e76f307995",
+    "section": "7. Финальное задание: яма",
+    "type": "heading_3",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "23b4d9fd-fe33-4fd9-ab68-59f46b148848",
+    "section": "7. Финальное задание: яма",
+    "type": "bulleted_list_item",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "32bb55b4-1cd9-4925-81b3-bf405a973a33",
+    "section": "7. Финальное задание: яма",
+    "type": "bulleted_list_item",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "7f99ad3d-9dfb-468a-95d1-8ba65b950e12",
+    "section": "7. Финальное задание: яма",
+    "type": "bulleted_list_item",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "422fac11-273d-42ac-a521-dbaa09883a8f",
+    "section": "8. Окружение и арт-дирекшн",
+    "type": "heading_2",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "7d1591c5-811b-4665-99af-d9078fd2cce1",
+    "section": "8. Окружение и арт-дирекшн",
+    "type": "paragraph",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "ddff1750-8840-4bd6-abfd-fcf8cdc4c5f6",
+    "section": "8. Окружение и арт-дирекшн",
+    "type": "heading_3",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "7e67ff81-b143-4814-9c2a-cd08dd1cd3fa",
+    "section": "8. Окружение и арт-дирекшн",
+    "type": "table",
+    "status": "not_implemented",
+    "source_children": [
+      "36b17231-f85d-4589-8eac-741dab38c696",
+      "7cd6f0ca-5a6a-463b-b67c-cb7128c692ce",
+      "03912db4-9241-4b57-8be5-9f5b800c5a2b",
+      "5b685bc8-6846-49f4-a007-869b2e4d6794",
+      "68004afb-ef6c-4ced-a545-daefa60f3d31",
+      "d67343c4-b1e7-4eeb-892b-8c6fc424bd3a"
+    ]
+  },
+  {
+    "source_block_id": "36b17231-f85d-4589-8eac-741dab38c696",
+    "section": "8. Окружение и арт-дирекшн",
+    "type": "table_row",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "7cd6f0ca-5a6a-463b-b67c-cb7128c692ce",
+    "section": "8. Окружение и арт-дирекшн",
+    "type": "table_row",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "03912db4-9241-4b57-8be5-9f5b800c5a2b",
+    "section": "8. Окружение и арт-дирекшн",
+    "type": "table_row",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "5b685bc8-6846-49f4-a007-869b2e4d6794",
+    "section": "8. Окружение и арт-дирекшн",
+    "type": "table_row",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "68004afb-ef6c-4ced-a545-daefa60f3d31",
+    "section": "8. Окружение и арт-дирекшн",
+    "type": "table_row",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "d67343c4-b1e7-4eeb-892b-8c6fc424bd3a",
+    "section": "8. Окружение и арт-дирекшн",
+    "type": "table_row",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "44860c72-4292-49b6-bcef-aef31e674e19",
+    "section": "8. Окружение и арт-дирекшн",
+    "type": "heading_3",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "7efa7c26-7bc3-41ab-a83c-ee9c46fe52c9",
+    "section": "8. Окружение и арт-дирекшн",
+    "type": "table",
+    "status": "not_implemented",
+    "source_children": [
+      "c837fd16-0c11-4398-8fa8-88533a220fcf",
+      "c3942ac2-622b-4152-b498-93ec2dea8d7b",
+      "8b0b124e-2fd3-4e2f-95c4-e6b5c25662f5",
+      "eadf3507-8f72-4ae0-a739-c0c17a7a8f4a",
+      "5c10eae0-568d-4107-836a-2bdd8fa551ee"
+    ]
+  },
+  {
+    "source_block_id": "c837fd16-0c11-4398-8fa8-88533a220fcf",
+    "section": "8. Окружение и арт-дирекшн",
+    "type": "table_row",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "c3942ac2-622b-4152-b498-93ec2dea8d7b",
+    "section": "8. Окружение и арт-дирекшн",
+    "type": "table_row",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "8b0b124e-2fd3-4e2f-95c4-e6b5c25662f5",
+    "section": "8. Окружение и арт-дирекшн",
+    "type": "table_row",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "eadf3507-8f72-4ae0-a739-c0c17a7a8f4a",
+    "section": "8. Окружение и арт-дирекшн",
+    "type": "table_row",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "5c10eae0-568d-4107-836a-2bdd8fa551ee",
+    "section": "8. Окружение и арт-дирекшн",
+    "type": "table_row",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "dbbc1a2a-9f34-48b9-9e49-dbbe00c2ddaf",
+    "section": "8. Окружение и арт-дирекшн",
+    "type": "heading_3",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "07743a93-32bf-4cc5-bcdf-634d33776ab0",
+    "section": "8. Окружение и арт-дирекшн",
+    "type": "bulleted_list_item",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "de79d6bf-2c9b-4b9d-a09d-875526a42eea",
+    "section": "8. Окружение и арт-дирекшн",
+    "type": "bulleted_list_item",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "658bd5d3-e78b-49d0-a50a-97a417d518ed",
+    "section": "8. Окружение и арт-дирекшн",
+    "type": "bulleted_list_item",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "2dc0d42f-6c4a-4937-9980-c883d5407018",
+    "section": "8. Окружение и арт-дирекшн",
+    "type": "bulleted_list_item",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "5b0a8a2d-7696-47e7-af5c-ec6a63c2509f",
+    "section": "8. Окружение и арт-дирекшн",
+    "type": "bulleted_list_item",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "3e31d256-4a79-4d85-a20e-863899150fe9",
+    "section": "8. Окружение и арт-дирекшн",
+    "type": "heading_3",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "8441516b-cf95-4778-8a82-d84c4193976e",
+    "section": "8. Окружение и арт-дирекшн",
+    "type": "bulleted_list_item",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "aeb2f24a-5440-4c42-80aa-45863d6aea43",
+    "section": "8. Окружение и арт-дирекшн",
+    "type": "bulleted_list_item",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "b2c6bdff-5e55-43a6-bec0-b7dfa27296e8",
+    "section": "8. Окружение и арт-дирекшн",
+    "type": "bulleted_list_item",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "f782cea9-dea3-4871-9d23-1e78d2418faa",
+    "section": "8. Окружение и арт-дирекшн",
+    "type": "bulleted_list_item",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "e7598e13-eeef-4618-ab9f-c333d3a1eacd",
+    "section": "9. Пост-обработка и эффекты камеры",
+    "type": "heading_2",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "561e88e5-dbc2-49e5-ae90-1cced3f03bc3",
+    "section": "9. Пост-обработка и эффекты камеры",
+    "type": "paragraph",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "07549f86-08f6-4bcf-a57c-c9ca12c271fe",
+    "section": "9. Пост-обработка и эффекты камеры",
+    "type": "heading_3",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "930db15f-a0e1-4029-ab93-aa8c85bf026b",
+    "section": "9. Пост-обработка и эффекты камеры",
+    "type": "bulleted_list_item",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "f2657a2a-1962-4bf1-b040-1a3839c5cfea",
+    "section": "9. Пост-обработка и эффекты камеры",
+    "type": "bulleted_list_item",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "306e1c0b-e07e-401f-8a7e-0a6a16a397d1",
+    "section": "9. Пост-обработка и эффекты камеры",
+    "type": "bulleted_list_item",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "4eac8485-6780-49dd-b1bc-9c836355174b",
+    "section": "9. Пост-обработка и эффекты камеры",
+    "type": "bulleted_list_item",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "0ed1eb20-2db0-46db-ad8d-fc2322b6cf7d",
+    "section": "9. Пост-обработка и эффекты камеры",
+    "type": "bulleted_list_item",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "e65bedf1-b63c-4ca0-8f4a-18d2ddff0c2a",
+    "section": "9. Пост-обработка и эффекты камеры",
+    "type": "heading_3",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "92358009-f0b0-4e0a-932d-2ef1baa3bc19",
+    "section": "9. Пост-обработка и эффекты камеры",
+    "type": "table",
+    "status": "not_implemented",
+    "source_children": [
+      "e903d5c1-3df9-40eb-8d21-ffa81085bc00",
+      "c5d9278d-6b88-4bc6-9103-b54c660e07fc",
+      "d56ff07d-426e-4ec2-bd8c-d69d5b24e0a4",
+      "cbcce185-5f07-47b7-bfd8-692476558ea5",
+      "6743375e-c37a-4357-840e-6a6473c2bb11",
+      "ce8cc2d9-75fd-4e35-b7aa-f7c97f78a137",
+      "4a3dfe44-4cbe-4d95-b2d1-79a5b3a21d57",
+      "6b18a6d0-6235-45ae-bd7c-c66c119ee753",
+      "39afe1f8-3c81-41f8-92fe-a8d92e2e5890"
+    ]
+  },
+  {
+    "source_block_id": "e903d5c1-3df9-40eb-8d21-ffa81085bc00",
+    "section": "9. Пост-обработка и эффекты камеры",
+    "type": "table_row",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "c5d9278d-6b88-4bc6-9103-b54c660e07fc",
+    "section": "9. Пост-обработка и эффекты камеры",
+    "type": "table_row",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "d56ff07d-426e-4ec2-bd8c-d69d5b24e0a4",
+    "section": "9. Пост-обработка и эффекты камеры",
+    "type": "table_row",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "cbcce185-5f07-47b7-bfd8-692476558ea5",
+    "section": "9. Пост-обработка и эффекты камеры",
+    "type": "table_row",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "6743375e-c37a-4357-840e-6a6473c2bb11",
+    "section": "9. Пост-обработка и эффекты камеры",
+    "type": "table_row",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "ce8cc2d9-75fd-4e35-b7aa-f7c97f78a137",
+    "section": "9. Пост-обработка и эффекты камеры",
+    "type": "table_row",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "4a3dfe44-4cbe-4d95-b2d1-79a5b3a21d57",
+    "section": "9. Пост-обработка и эффекты камеры",
+    "type": "table_row",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "6b18a6d0-6235-45ae-bd7c-c66c119ee753",
+    "section": "9. Пост-обработка и эффекты камеры",
+    "type": "table_row",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "39afe1f8-3c81-41f8-92fe-a8d92e2e5890",
+    "section": "9. Пост-обработка и эффекты камеры",
+    "type": "table_row",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "ee2d3d8e-0984-481d-900a-c8281bb800ba",
+    "section": "9. Пост-обработка и эффекты камеры",
+    "type": "heading_3",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "94305a61-76c7-4c4a-a42f-d5bd60f432e4",
+    "section": "9. Пост-обработка и эффекты камеры",
+    "type": "table",
+    "status": "not_implemented",
+    "source_children": [
+      "06cb251d-cb85-496b-b588-87c06cf7c4ab",
+      "ed6d59b9-5a8d-42ff-a9ee-d8927a8a1532",
+      "39b7be35-9087-493d-bfb7-2488909c6e39",
+      "977cd1fe-af6f-42ed-be65-c042d60c28af",
+      "26e7c814-fe8f-41ae-b010-8e81e7ee3270",
+      "f189a217-0f4e-484c-9d21-0724222bc327",
+      "33f0d262-7517-4d58-9cae-1ed5cdeea084"
+    ]
+  },
+  {
+    "source_block_id": "06cb251d-cb85-496b-b588-87c06cf7c4ab",
+    "section": "9. Пост-обработка и эффекты камеры",
+    "type": "table_row",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "ed6d59b9-5a8d-42ff-a9ee-d8927a8a1532",
+    "section": "9. Пост-обработка и эффекты камеры",
+    "type": "table_row",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "39b7be35-9087-493d-bfb7-2488909c6e39",
+    "section": "9. Пост-обработка и эффекты камеры",
+    "type": "table_row",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "977cd1fe-af6f-42ed-be65-c042d60c28af",
+    "section": "9. Пост-обработка и эффекты камеры",
+    "type": "table_row",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "26e7c814-fe8f-41ae-b010-8e81e7ee3270",
+    "section": "9. Пост-обработка и эффекты камеры",
+    "type": "table_row",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "f189a217-0f4e-484c-9d21-0724222bc327",
+    "section": "9. Пост-обработка и эффекты камеры",
+    "type": "table_row",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "33f0d262-7517-4d58-9cae-1ed5cdeea084",
+    "section": "9. Пост-обработка и эффекты камеры",
+    "type": "table_row",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "ab5fef5a-cb89-4cca-a54b-a96dc91d4210",
+    "section": "9. Пост-обработка и эффекты камеры",
+    "type": "heading_3",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "c8c563e0-8bf4-44b4-94b7-4a8cafcdb904",
+    "section": "9. Пост-обработка и эффекты камеры",
+    "type": "bulleted_list_item",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "78a3475b-0560-4954-9d94-88ab86b49636",
+    "section": "9. Пост-обработка и эффекты камеры",
+    "type": "bulleted_list_item",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "dcb10813-4e77-4c55-b47e-07364d2db252",
+    "section": "9. Пост-обработка и эффекты камеры",
+    "type": "bulleted_list_item",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "9d09a902-6981-431e-9b05-4f7bc1cf6e3f",
+    "section": "10. Звук",
+    "type": "heading_2",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "43826b6b-e380-4776-966d-7ff054b58b63",
+    "section": "10. Звук",
+    "type": "paragraph",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "1c95c16f-4719-47c9-b9b4-735c6bd356c9",
+    "section": "10. Звук",
+    "type": "heading_3",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "9b363d08-6298-4dba-8b6e-351c00dc6596",
+    "section": "10. Звук",
+    "type": "paragraph",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "a98d7d9f-0a50-4473-8325-7e88d32027ba",
+    "section": "10. Звук",
+    "type": "heading_3",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "a3d01e3e-06c1-49b1-a1bb-78b728534b4c",
+    "section": "10. Звук",
+    "type": "table",
+    "status": "not_implemented",
+    "source_children": [
+      "4a29807c-2b54-4dba-8082-7eaa5bfa4f82",
+      "bdfddb7c-20c0-4c29-91cd-6d62616ef328",
+      "4d07ae7d-7308-4c0f-9b21-f897b48ed1f7",
+      "c063ae9a-cd02-40de-8c71-e09ff8a13154",
+      "d58f2dd8-5744-4fb1-b370-0d6cf1360c13",
+      "4e25ae6e-a7ad-4d3c-9a05-b75ceef99d13",
+      "aa2979ab-efaa-47e4-8be5-71dbfdbbd61e"
+    ]
+  },
+  {
+    "source_block_id": "4a29807c-2b54-4dba-8082-7eaa5bfa4f82",
+    "section": "10. Звук",
+    "type": "table_row",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "bdfddb7c-20c0-4c29-91cd-6d62616ef328",
+    "section": "10. Звук",
+    "type": "table_row",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "4d07ae7d-7308-4c0f-9b21-f897b48ed1f7",
+    "section": "10. Звук",
+    "type": "table_row",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "c063ae9a-cd02-40de-8c71-e09ff8a13154",
+    "section": "10. Звук",
+    "type": "table_row",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "d58f2dd8-5744-4fb1-b370-0d6cf1360c13",
+    "section": "10. Звук",
+    "type": "table_row",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "4e25ae6e-a7ad-4d3c-9a05-b75ceef99d13",
+    "section": "10. Звук",
+    "type": "table_row",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "aa2979ab-efaa-47e4-8be5-71dbfdbbd61e",
+    "section": "10. Звук",
+    "type": "table_row",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "fbb5c6a7-c898-47b1-99f3-e5ccc613a4ec",
+    "section": "10. Звук",
+    "type": "heading_3",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "c146b037-4e57-4470-9a4b-cf7c14bc6fc6",
+    "section": "10. Звук",
+    "type": "table",
+    "status": "not_implemented",
+    "source_children": [
+      "053bdae2-421e-4deb-897c-1b6fe71d8a41",
+      "de1efd0e-6e0d-4fe4-87e1-ffc03f297920",
+      "1343231c-995b-4aab-a1d9-8225eecf1bc0",
+      "d0780923-b3e1-42ac-8ce9-63789265a087",
+      "bf16df41-70ee-4dc8-9be1-be143a636198",
+      "60be062e-c661-43a5-9f5e-8d0b3fc60c14",
+      "96b55cab-61d0-4978-9188-e507afb30534",
+      "e111518c-b2b7-47f2-8e79-5a02a9883973",
+      "7cf8d2a1-238f-4cf7-be23-4ecdec7f014c",
+      "24102b36-5a53-4cb5-bcc0-5f984a101aed",
+      "69fad894-436e-49bf-b55b-be07c2c2b2da"
+    ]
+  },
+  {
+    "source_block_id": "053bdae2-421e-4deb-897c-1b6fe71d8a41",
+    "section": "10. Звук",
+    "type": "table_row",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "de1efd0e-6e0d-4fe4-87e1-ffc03f297920",
+    "section": "10. Звук",
+    "type": "table_row",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "1343231c-995b-4aab-a1d9-8225eecf1bc0",
+    "section": "10. Звук",
+    "type": "table_row",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "d0780923-b3e1-42ac-8ce9-63789265a087",
+    "section": "10. Звук",
+    "type": "table_row",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "bf16df41-70ee-4dc8-9be1-be143a636198",
+    "section": "10. Звук",
+    "type": "table_row",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "60be062e-c661-43a5-9f5e-8d0b3fc60c14",
+    "section": "10. Звук",
+    "type": "table_row",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "96b55cab-61d0-4978-9188-e507afb30534",
+    "section": "10. Звук",
+    "type": "table_row",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "e111518c-b2b7-47f2-8e79-5a02a9883973",
+    "section": "10. Звук",
+    "type": "table_row",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "7cf8d2a1-238f-4cf7-be23-4ecdec7f014c",
+    "section": "10. Звук",
+    "type": "table_row",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "24102b36-5a53-4cb5-bcc0-5f984a101aed",
+    "section": "10. Звук",
+    "type": "table_row",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "69fad894-436e-49bf-b55b-be07c2c2b2da",
+    "section": "10. Звук",
+    "type": "table_row",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "2926fbe7-3b1e-477b-838b-e262663abb4d",
+    "section": "10. Звук",
+    "type": "paragraph",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "a11fef63-af4d-483b-a83b-3969942843e9",
+    "section": "10. Звук",
+    "type": "heading_3",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "ccc2414c-22fc-4515-84ad-77d533327872",
+    "section": "10. Звук",
+    "type": "bulleted_list_item",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "9ae5043f-2b82-478d-9068-833939c2b951",
+    "section": "10. Звук",
+    "type": "bulleted_list_item",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "a5e6dba3-fb9a-40d9-961c-f63e011a5dca",
+    "section": "10. Звук",
+    "type": "bulleted_list_item",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "119a0844-27db-4e86-a471-38fe05039772",
+    "section": "10. Звук",
+    "type": "bulleted_list_item",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "36a05411-4960-4a92-81d2-773e827c473e",
+    "section": "10. Звук",
+    "type": "bulleted_list_item",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "6534f255-b9ba-4045-98fb-1a19c3deda78",
+    "section": "11. Каталог готовых ассетов и решений",
+    "type": "heading_2",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "22457840-a54b-4af1-a6d5-6f3284fd8817",
+    "section": "11. Каталог готовых ассетов и решений",
+    "type": "paragraph",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "b336ada8-af49-48b3-b851-b3f136c4a5db",
+    "section": "11. Каталог готовых ассетов и решений",
+    "type": "table",
+    "status": "not_implemented",
+    "source_children": [
+      "d739055f-30e0-4d00-ac3e-4745e7f23167",
+      "bb786cdc-c9fa-4ecd-b0f3-0b165917a286",
+      "495154e1-166f-4c92-ae87-68b05d836adf",
+      "fee61ec4-ec71-4ef7-89da-7a317d1ca216",
+      "be860976-3723-4ed1-b262-8c9e3f5b6a5c",
+      "ce328b2f-3edf-4a4e-bc20-fefd29bbb5c4",
+      "5ba4fb79-d881-43db-88a9-475404f678fd",
+      "6492f5bc-4155-4049-b131-04ceef42aef1",
+      "d377257c-5475-4180-a1bc-00b1a3ff034d",
+      "10b71259-8b5c-4569-b141-930c55d85abd",
+      "861a7fba-52a5-4763-b8b9-189c3a0404ee",
+      "07b3df9c-9b02-47d3-90c1-28ef69c7b200",
+      "5169a1c7-36f4-43b2-994d-7687165bd118",
+      "f8d5af84-b1e9-48fe-aa49-a91f69ce45da",
+      "057a6dd9-5eec-4c1c-b80d-ac4ba391074e",
+      "8f0f9233-b63c-4f3d-9400-a4f26a142d82",
+      "e09e3d0f-a797-4aa8-b067-660605e40c69"
+    ]
+  },
+  {
+    "source_block_id": "d739055f-30e0-4d00-ac3e-4745e7f23167",
+    "section": "11. Каталог готовых ассетов и решений",
+    "type": "table_row",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "bb786cdc-c9fa-4ecd-b0f3-0b165917a286",
+    "section": "11. Каталог готовых ассетов и решений",
+    "type": "table_row",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "495154e1-166f-4c92-ae87-68b05d836adf",
+    "section": "11. Каталог готовых ассетов и решений",
+    "type": "table_row",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "fee61ec4-ec71-4ef7-89da-7a317d1ca216",
+    "section": "11. Каталог готовых ассетов и решений",
+    "type": "table_row",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "be860976-3723-4ed1-b262-8c9e3f5b6a5c",
+    "section": "11. Каталог готовых ассетов и решений",
+    "type": "table_row",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "ce328b2f-3edf-4a4e-bc20-fefd29bbb5c4",
+    "section": "11. Каталог готовых ассетов и решений",
+    "type": "table_row",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "5ba4fb79-d881-43db-88a9-475404f678fd",
+    "section": "11. Каталог готовых ассетов и решений",
+    "type": "table_row",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "6492f5bc-4155-4049-b131-04ceef42aef1",
+    "section": "11. Каталог готовых ассетов и решений",
+    "type": "table_row",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "d377257c-5475-4180-a1bc-00b1a3ff034d",
+    "section": "11. Каталог готовых ассетов и решений",
+    "type": "table_row",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "10b71259-8b5c-4569-b141-930c55d85abd",
+    "section": "11. Каталог готовых ассетов и решений",
+    "type": "table_row",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "861a7fba-52a5-4763-b8b9-189c3a0404ee",
+    "section": "11. Каталог готовых ассетов и решений",
+    "type": "table_row",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "07b3df9c-9b02-47d3-90c1-28ef69c7b200",
+    "section": "11. Каталог готовых ассетов и решений",
+    "type": "table_row",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "5169a1c7-36f4-43b2-994d-7687165bd118",
+    "section": "11. Каталог готовых ассетов и решений",
+    "type": "table_row",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "f8d5af84-b1e9-48fe-aa49-a91f69ce45da",
+    "section": "11. Каталог готовых ассетов и решений",
+    "type": "table_row",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "057a6dd9-5eec-4c1c-b80d-ac4ba391074e",
+    "section": "11. Каталог готовых ассетов и решений",
+    "type": "table_row",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "8f0f9233-b63c-4f3d-9400-a4f26a142d82",
+    "section": "11. Каталог готовых ассетов и решений",
+    "type": "table_row",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "e09e3d0f-a797-4aa8-b067-660605e40c69",
+    "section": "11. Каталог готовых ассетов и решений",
+    "type": "table_row",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "59003231-39f0-480f-b486-dc0d1a36c9e1",
+    "section": "11. Каталог готовых ассетов и решений",
+    "type": "paragraph",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "2d254ae5-a226-4167-a2d0-593fe33dfe73",
+    "section": "12. Архитектура проекта",
+    "type": "heading_2",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "6d570106-9c42-4447-b043-e592b9759b0b",
+    "section": "12. Архитектура проекта",
+    "type": "paragraph",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "91bbe384-254d-4bdf-bff7-4a656f6a80f1",
+    "section": "12. Архитектура проекта",
+    "type": "code",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "6829814c-7f60-4bac-9c43-6ed674f6169c",
+    "section": "12. Архитектура проекта",
+    "type": "paragraph",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "e4d6ef90-6c72-4d60-87d5-1227b250033e",
+    "section": "12. Архитектура проекта",
+    "type": "heading_3",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "d9296adb-1b01-4fa1-a945-8c29302cac5a",
+    "section": "12. Архитектура проекта",
+    "type": "code",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "d800f8b2-7e71-4c76-b2f1-8e4bf4f9587d",
+    "section": "12. Архитектура проекта",
+    "type": "heading_3",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "28ebe7e0-1700-4b20-80bf-241a2b388a37",
+    "section": "12. Архитектура проекта",
+    "type": "table",
+    "status": "not_implemented",
+    "source_children": [
+      "2875f70a-521b-465e-b157-64c3a409a29d",
+      "66bdf45f-b6ee-4d73-933a-625bd0f50dff",
+      "9fa5d2a3-bfaa-44db-a4c0-87f78083949d",
+      "7dd38677-1b41-454c-a68c-87b043857aaa",
+      "ad94ce1b-8047-4bd5-b376-b7a726c783b9",
+      "c1558777-192f-4fc8-97b1-cf1b00662279",
+      "8cf960d0-6f2f-4595-887c-2fc53cfecd7f",
+      "f7e5a915-d19f-4d78-9232-6acee4527484"
+    ]
+  },
+  {
+    "source_block_id": "2875f70a-521b-465e-b157-64c3a409a29d",
+    "section": "12. Архитектура проекта",
+    "type": "table_row",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "66bdf45f-b6ee-4d73-933a-625bd0f50dff",
+    "section": "12. Архитектура проекта",
+    "type": "table_row",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "9fa5d2a3-bfaa-44db-a4c0-87f78083949d",
+    "section": "12. Архитектура проекта",
+    "type": "table_row",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "7dd38677-1b41-454c-a68c-87b043857aaa",
+    "section": "12. Архитектура проекта",
+    "type": "table_row",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "ad94ce1b-8047-4bd5-b376-b7a726c783b9",
+    "section": "12. Архитектура проекта",
+    "type": "table_row",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "c1558777-192f-4fc8-97b1-cf1b00662279",
+    "section": "12. Архитектура проекта",
+    "type": "table_row",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "8cf960d0-6f2f-4595-887c-2fc53cfecd7f",
+    "section": "12. Архитектура проекта",
+    "type": "table_row",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "f7e5a915-d19f-4d78-9232-6acee4527484",
+    "section": "12. Архитектура проекта",
+    "type": "table_row",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "6d6920fd-028c-41cd-874a-9680465f20dd",
+    "section": "12. Архитектура проекта",
+    "type": "heading_3",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "34a2e3a8-1534-4e68-b3dc-1c5a7f6456d6",
+    "section": "12. Архитектура проекта",
+    "type": "paragraph",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "8a35a5f2-5913-4fde-a700-a8c04465b046",
+    "section": "13. Этапы и критерии приёмки",
+    "type": "heading_2",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "ad9bc1aa-64fa-409e-beb3-c308e3e2d2e2",
+    "section": "13. Этапы и критерии приёмки",
+    "type": "paragraph",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "0cddae4f-2609-42ef-b386-ce775e6116ca",
+    "section": "13. Этапы и критерии приёмки",
+    "type": "heading_3",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "49ce2836-cc38-46b0-a802-6b0547168c2b",
+    "section": "13. Этапы и критерии приёмки",
+    "type": "numbered_list_item",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "5a5c9e08-7504-4d13-a780-fb9726932af0",
+    "section": "13. Этапы и критерии приёмки",
+    "type": "numbered_list_item",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "94e2e6a7-8aa2-4e74-9acd-9ea943aea7ae",
+    "section": "13. Этапы и критерии приёмки",
+    "type": "numbered_list_item",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "67ae7523-d864-42df-8ee9-1ae9bd1fb219",
+    "section": "13. Этапы и критерии приёмки",
+    "type": "numbered_list_item",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "f4d64617-fd84-4fac-ba28-9248ecfed9cc",
+    "section": "13. Этапы и критерии приёмки",
+    "type": "numbered_list_item",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "5d3199f3-d2ce-4921-a240-d4ebb8b6d5ee",
+    "section": "13. Этапы и критерии приёмки",
+    "type": "numbered_list_item",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "7ddf0c15-5065-4c12-b4d1-b6a1f12f2db9",
+    "section": "13. Этапы и критерии приёмки",
+    "type": "numbered_list_item",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "d05dea95-5b98-4f6e-9a04-ba8e8a8c9455",
+    "section": "13. Этапы и критерии приёмки",
+    "type": "paragraph",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "5e28ce6a-4fc1-4478-913e-0aaa89537e72",
+    "section": "13. Этапы и критерии приёмки",
+    "type": "heading_3",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "2855a24d-3310-48b1-b227-0b9ff29004de",
+    "section": "13. Этапы и критерии приёмки",
+    "type": "to_do",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "d2da3cad-d6f8-4292-adbe-0911efef1b6a",
+    "section": "13. Этапы и критерии приёмки",
+    "type": "to_do",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "052309e6-11c7-471b-a1c1-3ffe273934ef",
+    "section": "13. Этапы и критерии приёмки",
+    "type": "to_do",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "a7f886b7-5a57-44cd-963f-184280793346",
+    "section": "13. Этапы и критерии приёмки",
+    "type": "to_do",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "16b0179e-90ec-43db-91eb-8c5d6bf5b1f2",
+    "section": "13. Этапы и критерии приёмки",
+    "type": "to_do",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "11020cc6-658a-419c-9c34-0a621807254c",
+    "section": "13. Этапы и критерии приёмки",
+    "type": "to_do",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "fe387de3-8811-4f1b-b559-568f5c358b7c",
+    "section": "13. Этапы и критерии приёмки",
+    "type": "to_do",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "9bff2143-bb74-402c-92c8-5fdc2b0d0171",
+    "section": "13. Этапы и критерии приёмки",
+    "type": "to_do",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "5b37cc9c-7a94-491d-a16e-1aa16c5ee1f4",
+    "section": "13. Этапы и критерии приёмки",
+    "type": "to_do",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "32184c0d-e8b0-4e26-8ab6-786ae62fced3",
+    "section": "13. Этапы и критерии приёмки",
+    "type": "to_do",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "a079aaa8-acfd-4055-aa80-a2dc832a7641",
+    "section": "13. Этапы и критерии приёмки",
+    "type": "to_do",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "25f41031-c9e3-408a-bab3-f87908c1488a",
+    "section": "13. Этапы и критерии приёмки",
+    "type": "heading_3",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "f2bf92b4-207e-45ed-9004-8cc4d9f8c3a2",
+    "section": "13. Этапы и критерии приёмки",
+    "type": "bulleted_list_item",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "0bf212dd-69cf-435f-bf06-554099c7b54b",
+    "section": "13. Этапы и критерии приёмки",
+    "type": "bulleted_list_item",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "ef2a87ba-e478-402d-88f7-7ba4b59f4c2b",
+    "section": "13. Этапы и критерии приёмки",
+    "type": "bulleted_list_item",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "7b4980cc-8ec3-40df-ba2b-93371cde989f",
+    "section": "13. Этапы и критерии приёмки",
+    "type": "bulleted_list_item",
+    "status": "not_implemented",
+    "source_children": []
+  },
+  {
+    "source_block_id": "0d5272c2-d955-443a-b373-5e8044eb61c5",
+    "section": "13. Этапы и критерии приёмки",
+    "type": "bulleted_list_item",
+    "status": "not_implemented",
+    "source_children": []
+  }
+]

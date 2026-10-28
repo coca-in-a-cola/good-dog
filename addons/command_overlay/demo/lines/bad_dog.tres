@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="OverlayLine" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://addons/command_overlay/overlay_line.gd" id="1_line"]
+
+[resource]
+script = ExtResource("1_line")
+id = &"bad_dog"
+text = "BAD DOG."
+mode = 0
+text_color = Color(0.7019608, 0.14901961, 0.11764706, 1)
+glow_color = Color(0.7019608, 0.14901961, 0.11764706, 0.6)

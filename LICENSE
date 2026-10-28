@@ -1,0 +1,41 @@
+MIT License
+
+Copyright (c) 2026 coca-in-a-cola / GOOD DOG contributors
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+-------------------------------------------------------------------------------
+Scope and exceptions
+
+The MIT license above covers only the original source code of this repository
+(GDScript, shaders, scenes and resources written for GOOD DOG). It does NOT cover:
+
+- Third-party assets, which keep their own licenses (see THIRD_PARTY.md):
+  * addons/command_overlay/assets/fonts/NotoSans-*.ttf — SIL Open Font License 1.1,
+    Copyright 2022 The Noto Project Authors; full text in
+    addons/command_overlay/assets/fonts/OFL.txt. The fonts are not MIT-licensed.
+  * addons/command_overlay/assets/sfx/camera_flash.wav and its source preview —
+    derived from Freesound sound 745481 by artem_uanety, CC0 1.0.
+- The Godot Engine (MIT, Copyright (c) 2014-present Godot Engine contributors;
+  Copyright (c) 2007-2014 Juan Linietsky, Ariel Manzur) and its bundled
+  third-party components, whose notices ship with exported builds as required
+  (see THIRD_PARTY.md, "Godot Engine").
+- The original game design document (docs/original/ and any private GDD export).
+  It is private, all rights reserved by its owner, and is not licensed or
+  published by this file.

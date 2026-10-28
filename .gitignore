@@ -1,0 +1,9 @@
+.godot/
+.export/
+builds/
+.env
+*.log
+private/
+docs/original/GDD.md
+# temporary portability project created and removed by tools/portability_test.gd
+.tmp/
