@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="OverlayLine" load_steps=2 format=3]
+[ext_resource type="Script" path="res://addons/command_overlay/overlay_line.gd" id="1"]
+[resource]
+script = ExtResource("1")
+id = &"grab_r1"
+text = "NOW. GRAB THE STICK."
+mode = 1
+per_word = true
+word_interval = 0.4

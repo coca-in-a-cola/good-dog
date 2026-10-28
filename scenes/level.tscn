@@ -1,6 +1,6 @@
 [gd_scene load_steps=24 format=3]
 
-[ext_resource type="Script" path="res://scripts/level_bark.gd" id="1_level"]
+[ext_resource type="Script" path="res://scripts/level_full.gd" id="1_level"]
 [ext_resource type="PackedScene" path="res://scenes/player.tscn" id="2_player"]
 [ext_resource type="Script" path="res://scripts/command_director.gd" id="3_director"]
 [ext_resource type="Script" path="res://scripts/pressure_controller.gd" id="4_pressure"]

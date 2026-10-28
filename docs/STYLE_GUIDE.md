@@ -12,3 +12,9 @@ First-person sterile white/cyan liminal complex; submission, emptiness and surve
 - Exposure warning before menu; reduced flashes and reduced shake (30% trauma); each effect individually disabled. GPU target60FPS1080p GTX1060/RX580 requires real hardware evidence.
 
 Exact source tables and values remain authoritative; each object article links the relevant source section.
+
+## Implemented F3 greybox versus target style
+
+`scripts/level_full.gd` currently builds CSG white rooms, red box stick/drag marks, a pale emissive place circle, black observation window, simple cyan observer boxes and a subtractive pit floor. The carried stick is a camera-child box, not finished teeth/hand art. These are production collision/interaction placeholders, not final asset/style acceptance. The Noto Sans overlay font is bundled, not an engine fallback.
+
+F4 dressing/CCTV/numbered doors and material/lighting fidelity remain open; F5 soundscape/mixing, F6 effect polish and F7 exported interaction/performance acceptance are not certified by native headless tests. No new art or sound is introduced by the verification rescue. Parent-owned rendered capture and native pixel/audio review must establish what is actually visible/audible before acceptance.

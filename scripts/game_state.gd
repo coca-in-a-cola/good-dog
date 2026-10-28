@@ -85,11 +85,13 @@ func fail() -> void:
 
 ## F3 boundary: pit trigger → 4 s fall → finale scene.
 func enter_falling() -> void:
-	_set_state(&"falling")
+	if state == &"playing":
+		_set_state(&"falling")
 
 
 func enter_finale() -> void:
-	_set_state(&"finale")
+	if state == &"falling":
+		_change("res://scenes/finale.tscn", &"finale")
 
 
 # --- Pause (OBEY / RUN AWAY) --------------------------------------------------

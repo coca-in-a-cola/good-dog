@@ -1,6 +1,12 @@
 # leash-and-pit
 
-Original GDD sections: 7. Status: F2 CONTRACT only (`scripts/leash_constraint.gd`; the post-move clamp is wired in `GoodDogPlayer`). Pit room, trigger, fall, pre-move velocity integration and the 60 s randomized physics wall-slide regression remain OPEN (F3).
+Original GDD sections: 7. Status: F3 production greybox implemented, parent rendered/export acceptance pending. `GoodDogPlayer` constrains velocity before `move_and_slide` and ratchets/clamps position afterward, without changing vendor files. Hall entry applies transformation step 4 and activates the leash around (0,0,-40.6).
+
+## F3 verification and remaining work
+
+`test_actual_sixty_second_character_wallslide_leash` executes 3600 native physics-frame ticks at 60Hz with seed 6147, actual CharacterBody3D movement, corridor contacts and radius-growth tolerance 0.00001. It explicitly positions a fixture; it is not traversal evidence. The standard runner isolates F3 with fixed-fps 60 in a bounded child, leaving F1 wall-clock overlay tests unaccelerated. This is 60 simulated physics seconds, not a claim of 60 wall-clock seconds.
+
+The input-only route crosses the real hole trigger below the uncapped floor, stops the timer, disables controls and waits four clock seconds before finale. RUN AWAY regressions rebuild later-phase scenes, gates, items, transformation and leash. Chain audio/visual fidelity, final fall presentation and rendered/export input acceptance remain pending F5–F7 work.
 
 ## Actual contract (F2)
 

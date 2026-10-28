@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="Command" load_steps=10 format=3]
+[ext_resource type="Script" path="res://scripts/command.gd" id="cmd"]
+[ext_resource type="Script" path="res://addons/command_overlay/overlay_line.gd" id="line"]
+[ext_resource type="Resource" path="res://data/lines/good_dog_words.tres" id="good"]
+[ext_resource type="Resource" path="res://data/lines/place_r1.tres" id="r1"]
+[ext_resource type="Resource" path="res://data/lines/place_r2.tres" id="r2"]
+[ext_resource type="Resource" path="res://data/lines/place_r3.tres" id="r3"]
+[ext_resource type="Resource" path="res://data/lines/place_r4.tres" id="r4"]
+[ext_resource type="Resource" path="res://data/lines/place_r5.tres" id="r5"]
+[ext_resource type="Resource" path="res://data/lines/place_r6.tres" id="r6"]
+[resource]
+script = ExtResource("cmd")
+id = &"place"
+order_line = ExtResource("r1")
+hint_text = "PRESS [E] TO PLACE"
+ladder = PackedFloat32Array(20,10,5,3,2,1)
+escalation_lines = Array[ExtResource("line")]([ExtResource("r2"), ExtResource("r3"), ExtResource("r4"), ExtResource("r5"), ExtResource("r6")])
+success_line = ExtResource("good")
+transform_step = 3
+completion_signal = &"placed"

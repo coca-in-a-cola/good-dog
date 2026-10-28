@@ -41,6 +41,7 @@ func _ready() -> void:
 	debug = false
 	sprint_enabled = false
 	jump_velocity = 0.0
+	_shape.shape = _shape.shape.duplicate()
 	_noise.seed = 46
 	_noise.frequency = 2.0
 
@@ -56,20 +57,31 @@ func _unhandled_input(event: InputEvent) -> void:
 		interacted.emit()
 		get_viewport().set_input_as_handled()
 		return
-	super(event)
+	# Headless DisplayServer cannot capture the cursor. Accept the same motion
+	# events there so native physics QA exercises look + raycasts, not teleports.
+	if event is InputEventMouseMotion and DisplayServer.get_name() == "headless":
+		rotate_y(-event.relative.x * horizontal_mouse_sensitivity)
+		head.rotate_x(-event.relative.y * vertical_mouse_sensitivity)
+	else:
+		super(event)
 	head.rotation.x = clampf(head.rotation.x, deg_to_rad(MIN_LOOK_DOWN_DEG), deg_to_rad(max_look_up_deg))
 
 
 func _physics_process(delta: float) -> void:
 	var ov := get_node_or_null(^"/root/Overlay")
+	# Narrow movement adapter: vendor computes AND moves internally, so calling
+	# super here would overwrite a pre-constrained velocity. Keep vendor untouched.
+	if not is_on_floor():
+		velocity.y -= gravity * delta
+	var input_dir := Vector2.ZERO
 	if controls_enabled and (ov == null or not ov.is_input_blocked()):
-		super(delta)
-	else:
-		if not is_on_floor():
-			velocity.y -= gravity * delta
-		velocity.x = 0.0
-		velocity.z = 0.0
-		move_and_slide()
+		input_dir = Input.get_vector("move_left", "move_right", "move_forward", "move_backward")
+	var direction := (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
+	velocity.x = direction.x * walk_speed
+	velocity.z = direction.z * walk_speed
+	if leash != null and leash.active:
+		velocity = leash.constrain_velocity(global_position, velocity)
+	move_and_slide()
 	if leash != null and leash.active:
 		var p := leash.clamp_position(global_position)
 		if not p.is_equal_approx(global_position):

@@ -61,7 +61,7 @@ func clamp_position(position: Vector3) -> Vector3:
 	var flat := _flat(position - center)
 	var d := flat.length()
 	max_d = minf(max_d, d)
-	if d <= max_d or d < EPSILON:
+	if d <= max_d:
 		return position
 	var clamped := flat / d * max_d
 	return Vector3(center.x + clamped.x, position.y, center.z + clamped.z)
