@@ -4,7 +4,7 @@ extends SceneTree
 ## Optional user arg after `--`: suite script paths (default: SUITES).
 ## Exit code 0 = all assertions passed, 1 = failures.
 
-const SUITES := ["res://tests/test_command_overlay.gd", "res://tests/test_f2_core.gd", "res://tests/test_f3_route.gd", "res://tests/test_finale_layout.gd"]
+const SUITES := ["res://tests/test_command_overlay.gd", "res://tests/test_f2_core.gd", "res://tests/test_f3_route.gd", "res://tests/test_finale_layout.gd", "res://tests/test_f4_art.gd"]
 var watchdog_at := 0
 var active_test := ""
 
@@ -33,7 +33,7 @@ func _run() -> void:
 		# F1 verifies WALL CLOCK thaw. F3 needs 3600 real physics ticks plus
 		# several minutes of manual-clock ladders. Isolate fixed-step execution
 		# in a child instead of accelerating the real-time overlay tests.
-		if path == "res://tests/test_f3_route.gd" and not fixed_child:
+		if path in ["res://tests/test_f3_route.gd", "res://tests/test_f4_art.gd"] and not fixed_child:
 			var output: Array = []
 			var code := OS.execute("timeout", ["60", OS.get_executable_path(), "--headless", "--path", ProjectSettings.globalize_path("res://"), "--fixed-fps", "60", "-s", "res://tests/run_tests.gd", "--", "--f3-fixed-child", path], output, true)
 			var text := "\n".join(output)

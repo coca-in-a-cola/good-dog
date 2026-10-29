@@ -6,7 +6,7 @@ var stick: Interactable
 var place_zone: Interactable
 var pit: Interactable
 var leash_ctl: LeashConstraint
-var mouth: MeshInstance3D
+var mouth: Node3D
 var observation_gate: CSGBox3D
 var pit_gate: CSGBox3D
 var observer: Node3D
@@ -19,6 +19,7 @@ var pull_left := 0.0
 func _ready() -> void:
 	super()
 	_build_route()
+	preload("res://scripts/representative_art.gd").install(self)
 	player.interacted.connect(_interact)
 	director.bind_interactable(stick)
 	director.bind_interactable(place_zone)
@@ -217,26 +218,24 @@ func _build_route() -> void:
 	body.add_child(collision)
 	add_child(body)
 	stick.target = body
-	stick.visual = _box("BloodyStick",body.position,Vector3(1,0.12,0.12),Color("c1121f"),false)
-	for i in 12:
-		_box("BloodTrail",Vector3(sin(i)*0.12,0.006,-4-i*0.4),Vector3(0.12,0.01,0.32),Color("c1121f"),false)
-	mouth = MeshInstance3D.new()
-	var mesh := BoxMesh.new()
-	mesh.size = Vector3(0.65,0.06,0.06)
-	mouth.mesh = mesh
-	mouth.material_override = _material(Color("c1121f"))
-	mouth.position = Vector3(0,-0.18,-0.42)
+	stick.visual = preload("res://scripts/representative_art.gd").asset(preload("res://assets/models/f4/bent_stick.glb"),self,body.position,"BloodyStick")
+
+	mouth = preload("res://assets/models/f4/bent_stick.glb").instantiate()
+	mouth.name = "MouthStick"
+	mouth.scale = Vector3.ONE * 0.48
+	mouth.position = Vector3(0,-0.24,-0.48)
 	mouth.visible = false
 	player.camera.add_child(mouth)
 	place_zone = _item(&"placed")
 	place_zone.area = _area(Vector3(0,0.7,-24.6),Vector3(2.5,1.4,2.5))
-	place_zone.visual = _box("PlacedStick",Vector3(0,0.1,-24.6),Vector3(1,0.12,0.12),Color("c1121f"),false)
+	place_zone.visual = preload("res://scripts/representative_art.gd").asset(preload("res://assets/models/f4/bent_stick.glb"),self,Vector3(0,0.1,-24.6),"PlacedStick")
 	place_zone.visual.visible = false
 	var circle := CSGCylinder3D.new()
 	circle.radius = 1.25
 	circle.height = 0.008
 	circle.position = Vector3(0,0.009,-24.6)
-	circle.material = _material(Color("fff4cf"),true)
+	circle.material = _material(Color("bfe3ea"),true)
+	circle.visible = false # Authored annulus, not the old filled greybox disk.
 	add_child(circle)
 	var spot := SpotLight3D.new()
 	spot.position = Vector3(0,2.9,-24.6)

@@ -4,10 +4,10 @@ Original GDD sections: 4,5. Status: F3 production greybox implemented; visual/ex
 
 ## Actual implementation and verification limits
 
-- GRAB uses a 2m camera physics ray, excluding the player; only the first collider may be the stick target. E outside range, aimed away, or occluded does nothing. On success the red box disappears, its collision layer clears, and praise completion reveals a camera-child red box as the carried stick.
-- PLACE requires carrying, actual Area3D overlap and a fresh E; it reveals the placed box and removes the camera carry after praise. Phase eligibility and one-shot `done` prevent duplicate completion.
+- GRAB uses a 2m camera physics ray, excluding the player; only the first collider may be the stick target. E outside range, aimed away, or occluded does nothing. On success the connected authored branch GLB disappears, its unchanged target collision layer clears, and praise completion reveals the same GLB camera-child lower-center at (0,-0.24,-0.48), visual scale 0.48. World anchors/collision remain fixed; mesh-only offsets settle pickup/placed wood onto the floor.
+- PLACE requires carrying, actual Area3D overlap, player horizontal origin within radius1.25m and a fresh E; it reveals the authored placed stick and removes the camera carry after praise. Only the thin cyan annulus is visible (old filled disk hidden); phase eligibility and one-shot `done` prevent duplicate completion.
 - `tests/test_f3_route.gd` contains a movement/input-only successful route and separate explicitly positioned fixtures for distance, real occluder, eligible-ray dismissal-E consumption and capsule growth. Fixture placement is NOT traversal evidence. Camera-reset motion is sent only after the deferred PLACE modal is dismissed.
-- F4 object/material detailing, F5 carry/footstep/breathing sound and F6 effect polish remain outside this greybox. Native rendered readability and exported OS-input acceptance remain pending.
+- Revision2 stick/carry/placement native pixels pass representative-sample review only. Remaining F4 object/material detailing, F5 carry/footstep/breathing sound, F6 effect polish and exported OS-input acceptance remain pending; this is not full F4 acceptance.
 
 ## Responsibility and contract
 
