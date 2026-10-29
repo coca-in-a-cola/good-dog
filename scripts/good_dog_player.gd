@@ -25,14 +25,16 @@ var max_look_up_deg := 89.0
 var bob_hz := 1.8
 var bob_amplitude_m := 0.05
 var mouse_sensitivity_scale := 1.0
+## Horizontal acceleration/braking; sharpens each step (GDD §6 "inertia drops").
+var acceleration_mps2 := 20.0
 var footstep_set: StringName = &"heavy_shoes"
 ## Optional F3 leash: post-move ratchet clamp (LeashConstraint.clamp_position).
 var leash: LeashConstraint
+## F6 camera layer: trauma shake, FOV punches, roll tilt, leash jolt.
+var camera_fx := TraumaCamera.new()
 
 var _bob_phase := 0.0
 var _trauma := 0.0
-var _noise := FastNoiseLite.new()
-var _noise_t := 0.0
 @onready var _shape: CollisionShape3D = $CollisionShape3D
 
 
@@ -42,8 +44,10 @@ func _ready() -> void:
 	sprint_enabled = false
 	jump_velocity = 0.0
 	_shape.shape = _shape.shape.duplicate()
-	_noise.seed = 46
-	_noise.frequency = 2.0
+	camera_fx.name = "TraumaCamera"
+	camera_fx.camera = camera
+	camera_fx.base_fov = camera.fov
+	add_child(camera_fx)
 
 
 func _unhandled_input(event: InputEvent) -> void:
@@ -77,8 +81,10 @@ func _physics_process(delta: float) -> void:
 	if controls_enabled and (ov == null or not ov.is_input_blocked()):
 		input_dir = Input.get_vector("move_left", "move_right", "move_forward", "move_backward")
 	var direction := (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
-	velocity.x = direction.x * walk_speed
-	velocity.z = direction.z * walk_speed
+	var accel: float = 80.0 if direction.is_zero_approx() else acceleration_mps2
+	var flat := Vector2(velocity.x, velocity.z).move_toward(Vector2(direction.x, direction.z) * walk_speed, accel * delta)
+	velocity.x = flat.x
+	velocity.z = flat.y
 	if leash != null and leash.active:
 		velocity = leash.constrain_velocity(global_position, velocity)
 	move_and_slide()
@@ -89,23 +95,19 @@ func _physics_process(delta: float) -> void:
 	_update_bob(delta)
 
 
-func _process(delta: float) -> void:
-	_noise_t += delta
-	var t := _trauma * _trauma
-	camera.h_offset = _noise.get_noise_2d(_noise_t * 10.0, 0.0) * 0.06 * t
-	camera.v_offset = _noise.get_noise_2d(0.0, _noise_t * 10.0) * 0.06 * t
-
-
 ## Pressure-driven camera trauma (already scaled for reduce_shake by the caller).
+## TraumaCamera holds it as the minimum under transient trauma.
 func set_shake_trauma(trauma: float) -> void:
 	_trauma = clampf(trauma, 0.0, 1.0)
+	camera_fx.baseline = _trauma
 
 
 func get_transform_values() -> Dictionary:
 	return {
 		eye_height_m = eye_height_m,
 		speed_mps = walk_speed,
-		fov_deg = camera.fov,
+		acceleration_mps2 = acceleration_mps2,
+		fov_deg = camera_fx.base_fov,
 		max_look_up_deg = max_look_up_deg,
 		bob_hz = bob_hz,
 		bob_amplitude_m = bob_amplitude_m,
@@ -117,7 +119,9 @@ func get_transform_values() -> Dictionary:
 ## Shared adapter used by TransformController (values from TransformStep).
 func apply_transform_values(v: Dictionary) -> void:
 	walk_speed = v.get(&"speed_mps", walk_speed)
-	camera.fov = v.get(&"fov_deg", camera.fov)
+	acceleration_mps2 = v.get(&"acceleration_mps2", acceleration_mps2)
+	camera_fx.base_fov = v.get(&"fov_deg", camera_fx.base_fov)
+	camera.fov = camera_fx.base_fov + camera_fx.get_fov_offset()
 	max_look_up_deg = v.get(&"max_look_up_deg", max_look_up_deg)
 	bob_hz = v.get(&"bob_hz", bob_hz)
 	bob_amplitude_m = v.get(&"bob_amplitude_m", bob_amplitude_m)

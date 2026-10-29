@@ -50,7 +50,7 @@ var _base_light_color := Color.WHITE
 func _init() -> void:
 	hum_db_curve = _curve([0.0, 3.0, 4.5, 6.0, 7.5, 9.0], 0.0, 9.0)
 	vignette_curve = _curve([0.25, 0.3, 0.4, 0.5, 0.62, 0.75], 0.0, 1.0)
-	aberration_curve = _curve([0.0, 0.0, 0.0, 0.002, 0.004, 0.006], 0.0, 0.01)
+	aberration_curve = _curve([0.0, 0.0, 0.0, 0.0, 0.004, 0.006], 0.0, 0.01)
 	grain_curve = _curve([0.03, 0.04, 0.05, 0.06, 0.07, 0.08], 0.0, 0.2)
 	saturation_curve = _curve([1.0, 0.95, 0.9, 0.82, 0.75, 0.7], 0.0, 1.0)
 	shake_curve = _curve([0.0, 0.0, 0.0, 0.12, 0.25, 0.35], 0.0, 1.0)

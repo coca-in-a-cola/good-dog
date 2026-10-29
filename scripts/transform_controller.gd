@@ -8,6 +8,7 @@ extends Node
 
 signal transform_step_changed(step: int)
 signal transform_finished(step: int)
+signal post_applied(values: Dictionary)
 
 ## Rows 0–4 (data/transform/step_N.tres).
 @export var steps: Array[TransformStep] = []
@@ -18,6 +19,7 @@ signal transform_finished(step: int)
 var clock: RealClock
 var current_step := 0
 var blending := false
+var post_values: Dictionary = {}
 
 var _from: Dictionary = {}
 var _to: TransformStep
@@ -43,6 +45,7 @@ func reset() -> void:
 	blending = false
 	current_step = 0
 	if not steps.is_empty():
+		post_values = values_of(steps[0])
 		_push(values_of(steps[0]))
 
 
@@ -107,9 +110,18 @@ static func values_of(step: TransformStep) -> Dictionary:
 		bob_amplitude_m = step.bob_amplitude_m,
 		mouse_sensitivity_scale = step.mouse_sensitivity_scale,
 		footstep_set = step.footstep_set,
+		canine_vision_weight = [0.0, 0.1, 0.25, 0.5, 0.8][clampi(step.index, 0, 4)],
+		barrel_distortion = [0.0, 0.0, 0.02, 0.06, 0.15][clampi(step.index, 0, 4)],
+		vignette = [0.0, 0.02, 0.05, 0.1, 0.15][clampi(step.index, 0, 4)],
+		chromatic_aberration = [0.0, 0.0, 0.0, 0.001, 0.002][clampi(step.index, 0, 4)],
+		saturation = [1.0, 0.95, 0.9, 0.85, 0.8][clampi(step.index, 0, 4)],
+		glow = [0.8, 0.82, 0.86, 0.92, 1.0][clampi(step.index, 0, 4)],
+		grain = [0.03, 0.032, 0.035, 0.038, 0.04][clampi(step.index, 0, 4)],
 	}
 
 
 func _push(v: Dictionary) -> void:
+	post_values = v
+	post_applied.emit(v)
 	if player != null and player.has_method(&"apply_transform_values"):
 		player.apply_transform_values(v)

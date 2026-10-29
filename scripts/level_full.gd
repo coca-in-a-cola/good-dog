@@ -25,6 +25,10 @@ func _ready() -> void:
 	audio.name = "LevelAudio"
 	add_child(audio)
 	audio.bind(self)
+	var pp: Node = preload("res://scenes/camera/post_process.tscn").instantiate()
+	add_child(pp)
+	if pp.has_method(&"bind"):
+		pp.bind(self)
 	player.interacted.connect(_interact)
 	director.bind_interactable(stick)
 	director.bind_interactable(place_zone)
