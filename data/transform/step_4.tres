@@ -1,6 +1,7 @@
-[gd_resource type="Resource" script_class="TransformStep" load_steps=3 format=3]
+[gd_resource type="Resource" script_class="TransformStep" load_steps=4 format=3]
 
 [ext_resource type="Script" path="res://scripts/transform_step.gd" id="1_step"]
+[ext_resource type="AudioStream" path="res://assets/audio/sfx/transform/transform_crunch.wav" id="2_sfx"]
 
 [sub_resource type="Curve" id="Curve_ease"]
 _data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
@@ -19,3 +20,4 @@ mouse_sensitivity_scale = 1.4
 footstep_set = &"claws_panting"
 transition_time = 2.5
 transition_curve = SubResource("Curve_ease")
+transition_sfx = ExtResource("2_sfx")

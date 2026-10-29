@@ -25,7 +25,8 @@ Scope and exceptions
 
 The MIT license above covers the original source code and original art of this
 repository (GDScript, Python, shaders, scenes, resources, authored meshes,
-textures and editable Blender documents made for GOOD DOG). It does NOT cover:
+textures, procedurally synthesized audio under assets/audio/ and editable
+Blender documents made for GOOD DOG). It does NOT cover:
 
 - Third-party assets, which keep their own licenses (see THIRD_PARTY.md):
   * addons/command_overlay/assets/fonts/NotoSans-*.ttf — SIL Open Font License 1.1,

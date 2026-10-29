@@ -57,3 +57,61 @@ Original GOOD DOG contributor-authored art (MIT, project `LICENSE`): `tools/art/
 Revision2 uses original MIT `tools/art/revise_f4.py` and `tools/art/revision2_mcp.py` for the connected 468-triangle branch with narrow irregular offshoot and separated stains, and `tools/art/stain_texture.py` for the 512×512 RGBA `assets/models/f4/blood_pool.png` silhouette. The latter is mathematical original texture authorship, not an external CC0 texture or image-model output. Built-in Godot Decal projects it flat onto the floor. Artist: ChatGPT artist <chatgpt@agents.mice.zone>, GOOD DOG contributor. Source, texture, native blend and GLB SHA-256 values are in `assets/models/f4/provenance.json`. No vendored files modified. Representative sample visually accepted; full F4 and specific external-kit acquisition remain pending.
 
 Original code: MIT (`LICENSE`). Exported builds must ship the Godot MIT/third-party notices and the Noto OFL text (OFL.txt is packed into the PCK by `export_presets.cfg`; an in-game credits screen is later scope). Godot's default Open Sans is still compiled into the engine binary as the UI fallback (demo buttons), and Godot's own notices cover it. Sonniss custom terms require review; prefer CC0 alternatives when uncertain.
+
+## F5 audio (2026-10-29): original procedural synthesis
+
+### Search log
+
+| Need | Step reached | Decision |
+|---|---|---|
+| Buses, master limiter, overlay muffle, room reverb, drone squeeze, transient control | 1: built-in | `default_bus_layout.tres`: `AudioEffectHardLimiter` (Master), `AudioEffectLowPassFilter` (SFX/Ambience muffle, Drone squeeze), `AudioEffectReverb` ×3, `AudioEffectCompressor` (SFX). `AudioEffectLimiter` is deprecated in Godot 4.7 in favour of `AudioEffectHardLimiter` and was not used. Room routing: built-in `Area3D` reverb-bus sends. No third-party audio code. |
+| Sound files (barks, praise, stick, footsteps, leash, fall, finale, ambience, pressure layers) | 1: built-in (no stock sounds ship with Godot) → 2: Asset Library → 4: CC0 libraries → 6: original | Asset Library API `https://godotengine.org/asset-library/api/asset?filter=sound%20effects&godot_version=4.7&max_results=10` returned only "BMOD" (asset 2884, MIT, a sound-design *tool*, no sound files): rejected. Freesound CC0-filtered search (`https://freesound.org/search/?q=dog+bark&f=license%3A%22Creative+Commons+0%22`) listed CC0 candidates (e.g. 625501, 749352, 485961, 612858, 440865, 495658, 180977, 868412). **No bytes were acquired:** shell network retrieval was not permitted in this session, original WAVs need a Freesound login, and no candidate's licence was re-verified on its own page. No candidate is imported or claimed. Kenney/Sonniss not evaluated (Sonniss terms are outside the pre-approved list). Step 5 (Blender) does not apply. **Step 6, original work:** every F5 file is synthesized from oscillators, seeded noise, glottal-pulse/formant models, Karplus-Strong plucks and RBJ biquads. Reason: no licence-verified CC0 bytes were obtainable here, and synthesis gives byte-reproducible, MIT-clean, loudness-controlled assets. There is no voice, speech synthesis, sample or recording. CC0 recordings (especially the real-dog tiers 3–4) remain a valid later replacement, subject to a listening review. |
+
+### Catalog
+
+All 40 files are original GOOD DOG contributor work under MIT (project `LICENSE`, no attribution obligation; credited in the finale credits as "Other sounds — original synthesis — MIT"). Source: `tools/audio/synth_f5.gd` (run: `godot4 --headless --path . -s res://tools/audio/synth_f5.gd`, Godot 4.7.2.stable). Version is the per-file RNG seed; regeneration is byte-identical (verified twice on 2026-10-29). Format: PCM s16le, 48 kHz, mono. Loops carry a RIFF `smpl` forward loop. Per-file BS.1770 loudness, sample peak and 4× true peak (all ≤ −1.5 dBTP) are in `assets/audio/PROVENANCE.json`, and `tests/test_f5_audio.gd` checks every SHA-256 below against that manifest and the files.
+
+| Local path | Sound | Seed | Seconds | SHA-256 | Verified |
+|---|---|---|---|---|---|
+| `assets/audio/sfx/bark/bark_step0.wav` | Bark tier 0: person imitating a bark (voiced /wʌf/) | 5100 | 0.55 | `2b0d909524292bc6bc65256383567ea5400a2cd7e85dedd53a33aeae5d9393c9` | 2026-10-29 |
+| `assets/audio/sfx/bark/bark_step1.wav` | Bark tier 1: hoarse human throat bark | 5101 | 0.42 | `a40c6b1f100329940a4e6f729571c1fcebee4b7629a9ff86f3f9f7fb7f63bee5` | 2026-10-29 |
+| `assets/audio/sfx/bark/bark_step2.wav` | Bark tier 2: guttural, period-doubled, half human | 5102 | 0.39 | `4e8ee581c04ad26a2c1e8a7daf765508470831f3179a3dd86fb2cfa3015aac66` | 2026-10-29 |
+| `assets/audio/sfx/bark/bark_step3.wav` | Bark tier 3: deep animal bark | 5103 | 0.33 | `c8b3aadefef339f047cd6942ef722dfff5210ac9ed43455db92d6592aabeb7e8` | 2026-10-29 |
+| `assets/audio/sfx/bark/bark_step4.wav` | Bark tier 4: resonant dog bark (synthetic, not a recording) | 5104 | 0.35 | `7cf6d6bf1f2d84f2e6d7e174bfcb236f836941ae4b504c35f9699e48c9897705` | 2026-10-29 |
+| `assets/audio/sfx/praise/praise_bell.wav` | Conditioned praise bell (E6), pit lure every 6 s | 5200 | 2.60 | `4b7dbcde79abaa46ee9cc397787f91d82dbe660ec1beb27b6d25057bb77528f2` | 2026-10-29 |
+| `assets/audio/sfx/praise/good_dog_praise.wav` | GOOD DOG: same bell + warm pad + treat-bag rustle | 5201 | 2.90 | `7b31dc10c5d6b954df2bbf90173e9521cd489b52c5b18a7d173bd368113ea7a0` | 2026-10-29 |
+| `assets/audio/sfx/stick/stick_pickup.wav` | Wet peel + blunt thud (pickup) | 5300 | 0.50 | `207ef5c19d888faa7dbbca0d64b7ec26b2447d9bf85262957fe5c22eaf90e5fe` | 2026-10-29 |
+| `assets/audio/sfx/stick/stick_place.wav` | Wet thud on tile (placement) | 5301 | 0.50 | `983ac61614138744a486e890fa80619a60fc184620ffcfcea1c21eab6efb17a2` | 2026-10-29 |
+| `assets/audio/sfx/footsteps/shoes_0.wav` | Leather/rubber sole on tile | 5400 | 0.22 | `13ecd6ae5a247a95d0b2234ff10398e4987cf5b64f055ea530b6ef8e3d4b3129` | 2026-10-29 |
+| `assets/audio/sfx/footsteps/shoes_1.wav` | Leather/rubber sole on tile | 5401 | 0.22 | `93cd7fdf615ae0c623683a5a6608f4ae20f583a8c272472b096336a6662972f5` | 2026-10-29 |
+| `assets/audio/sfx/footsteps/shoes_2.wav` | Leather/rubber sole on tile | 5402 | 0.22 | `284069f436ff2773ccd3878e2bf003ffd3c67676db5767176fb7b571a0c702cd` | 2026-10-29 |
+| `assets/audio/sfx/footsteps/shoes_3.wav` | Leather/rubber sole on tile | 5403 | 0.22 | `f7b70955f0001d61c83e4be5a3fa009a6fd3ee20fdf7565c5299c93c988b1ed1` | 2026-10-29 |
+| `assets/audio/sfx/footsteps/barefoot_0.wav` | Bare foot slap on tile | 5410 | 0.20 | `7a313d0478f91112e54d633c5b5da123fe63ccb08cff73ef9f93c6ea8767e26b` | 2026-10-29 |
+| `assets/audio/sfx/footsteps/barefoot_1.wav` | Bare foot slap on tile | 5411 | 0.20 | `af29f141b16ec7447c27cdd4dadf9d9ca920095bb91fcce9f399d364a08fa558` | 2026-10-29 |
+| `assets/audio/sfx/footsteps/barefoot_2.wav` | Bare foot slap on tile | 5412 | 0.20 | `157073395f91a079fe29b9ca004c9265e7c4924b28a071a42dc32e56996906f3` | 2026-10-29 |
+| `assets/audio/sfx/footsteps/barefoot_3.wav` | Bare foot slap on tile | 5413 | 0.20 | `cb8210ca35bae4d5d07d2a52d73e6e34e555b8c4aeb14445e3661adab96b1d4b` | 2026-10-29 |
+| `assets/audio/sfx/footsteps/shuffle_0.wav` | Bare foot shuffle + slap (step 2) | 5420 | 0.26 | `fed5558cb2fb8b4e8d675a2571bfdbf3679ff6151f5036385ffdf512bd1790bb` | 2026-10-29 |
+| `assets/audio/sfx/footsteps/shuffle_1.wav` | Bare foot shuffle + slap (step 2) | 5421 | 0.26 | `36c6a782c5fcd6c770e6f3e8e1445624246475859e24d7653c0a41a747b1d519` | 2026-10-29 |
+| `assets/audio/sfx/footsteps/shuffle_2.wav` | Bare foot shuffle + slap (step 2) | 5422 | 0.26 | `f730aa46cb077b5ecad711e5e2b8219b0a5b3f295d94a65c86356ab8b8d62a91` | 2026-10-29 |
+| `assets/audio/sfx/footsteps/shuffle_3.wav` | Bare foot shuffle + slap (step 2) | 5423 | 0.26 | `4644fa1329c94f2a2c8f316f2c3bbfddb9dc8b53f33b5d78c8173916c070df29` | 2026-10-29 |
+| `assets/audio/sfx/footsteps/claws_0.wav` | Claws clicking/scraping tile | 5430 | 0.16 | `9b18b591c4b5ec5ecd5e98201786007f0cb710f6d020ffefd820c9c665dae899` | 2026-10-29 |
+| `assets/audio/sfx/footsteps/claws_1.wav` | Claws clicking/scraping tile | 5431 | 0.16 | `9fd49891b7828e6f1050e779b6234c168f30cb08c63617057980da17674ca781` | 2026-10-29 |
+| `assets/audio/sfx/footsteps/claws_2.wav` | Claws clicking/scraping tile | 5432 | 0.16 | `efb80157f4d97a361f5d29bf0e9faf6681a110ae1355a2b675a95597a52dff33` | 2026-10-29 |
+| `assets/audio/sfx/footsteps/claws_3.wav` | Claws clicking/scraping tile | 5433 | 0.16 | `e32f31668f4b99b27e86bb9b70eb8f231c49e4ec6bc23f10005f86d811cdd382` | 2026-10-29 |
+| `assets/audio/sfx/leash/leash_pull.wav` | Chain clink + leather tension creak | 5500 | 0.90 | `45a05ef3f7f8743c8c9d46ad7e1b9150d7135e6f81c4604b5f1514baa03ed412` | 2026-10-29 |
+| `assets/audio/sfx/fall/fall_wind.wav` | Descending wind rush, hard cut at 3.7 s, silent to 4.0 s | 5600 | 4.00 | `3366422c289f725f9a1f9cc0020c8845e03749164c7f7f7827a9c5e376d243e8` | 2026-10-29 |
+| `assets/audio/sfx/finale/popper_confetti.wav` | Two party poppers + confetti burst | 5700 | 2.00 | `16a44bee34cd6ac61fe5f00c65e6a37d75d7d2c3c221214f3a25c69b7064b457` | 2026-10-29 |
+| `assets/audio/sfx/finale/applause_children.wav` | Small-hands applause (synthesized claps, no voices) | 5701 | 3.60 | `214f774cfb83183305dd2985d5b10ef7a8cd43c91ff140c7440988a55a337056` | 2026-10-29 |
+| `assets/audio/music/finale_jingle.wav` | Incongruously cheerful C-major toy jingle | 5702 | 5.16 | `36124fff5205ed8d457d789cbb3d2eb3117d0a2b1123f63535b11b0e9e6cc35d` | 2026-10-29 |
+| `assets/audio/ambience/fluorescent_hum_loop.wav` | Fluorescent hum loop: 50 Hz mains harmonics + arc buzz | 5800 | 2.00 | `c1fd9057765eeb1ac55fe163bad21690570e1d362e8fccfde09854ba2629154a` | 2026-10-29 |
+| `assets/audio/ambience/cctv_servo_loop.wav` | CCTV servo whine loop (620 Hz motor + gear) | 5801 | 1.00 | `a4ecd20c61e573405c0744bf31b61418b3ce1c246abeee1c78426966dd8d800e` | 2026-10-29 |
+| `assets/audio/ambience/drone_loop.wav` | Low pressure drone loop, 45/55 Hz + rumble | 5802 | 8.00 | `04fc0daa5d37529e9f547de669b0e1547575cfec9a33cab8a3036ee525518838` | 2026-10-29 |
+| `assets/audio/sfx/pressure/metronome_tick.wav` | Metronome/clock tick | 5900 | 0.07 | `28c56cca556f724d1215ec9c7cf930c3bc3cbe3e6925bfc997b5b14f246e1161` | 2026-10-29 |
+| `assets/audio/sfx/pressure/heartbeat.wav` | Heartbeat lub-dub | 5901 | 0.60 | `0ed93e51974c00fc3aa87c262ff893f58c97a8d1f9c938e76a7a7b27ef4553df` | 2026-10-29 |
+| `assets/audio/sfx/pressure/tinnitus_loop.wav` | Tinnitus loop, 7.04 kHz sine | 5902 | 2.00 | `e9f3b4d8ed02a0e1e39a58feb22129fa4534def75c106e814f838d56d384df40` | 2026-10-29 |
+| `assets/audio/sfx/player/panting_loop.wav` | Open-mouth panting loop (step 3–4) | 5903 | 1.00 | `a85c583b368289218884444b9c058b28229869f3d5ea21e5026b212d1e6f6238` | 2026-10-29 |
+| `assets/audio/sfx/transform/transform_crunch.wav` | Muffled joint crunch + low hum (transformation) | 6000 | 2.50 | `ed2ba338d2df67c02310fd0e136585aeff10c5570ce1d07d5c63836d9938039f` | 2026-10-29 |
+| `assets/audio/sfx/events/door_clank.wav` | Metal cell-door clank (prologue, distant slams) | 6001 | 1.80 | `4dc78c49d457bb613556e2d3a4775475dd0d4925b924faeca626704b2f1e863a` | 2026-10-29 |
+| `assets/audio/sfx/events/bad_dog_cut.wav` | BAD DOG power-cut thump before the silence | 6002 | 0.60 | `d90aab2dcaf17bebc37c349aa53f8cb5d4efd6369b64e54e483e15e3927cd121` | 2026-10-29 |
+
+Not covered by this evidence: no human has listened to these files. The barks are synthetic approximations. Tier 4 is not a recording of a real dog, and whether the tiers read as "human → dog" is unverified. A listening review is required before F5 acceptance.

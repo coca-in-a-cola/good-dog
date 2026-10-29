@@ -95,9 +95,37 @@ Warning → menu (START, reduce flashes/shake, QUIT) → 3 s black prologue with
 
 Original phase 3: GRAB/PLACE/JUMP; room progression/gates, transform values and collision safety, inward/tangential leash + ratchet, 60-second randomized wall-slide regression, fall and confetti/credits. Independent acceptance of F2 first. Implement actual production consumers, not only unused interfaces.
 
+## F5 — audio (source increment, NOT accepted)
+
+Implemented and tested. Acceptance needs a human listening review and a walkthrough with audio. Details: [audio-and-accessibility](objects/audio-and-accessibility.md); provenance: `THIRD_PARTY.md` "F5 audio".
+
+### Contracts added
+```gdscript
+# res://default_bus_layout.tres  Master[HardLimiter −1.5 dB] ← SFX[Compressor, LPF 800 off], Ambience[LPF 800 off],
+#                                UI(−3 dB), Music; Drone[LPF]→Ambience; ReverbCell/Corridor/Pit[Reverb]→SFX
+# scripts/audio/audio_mix.gd     autoload AudioMix: Overlay.sfx_bus = UI; tick(); is_muffled(); get_cutoff_hz();
+#                                fade_bus(bus, db, s); reset(); layout_db(bus); find_effect(bus, type)
+# scripts/audio/level_audio.gd   LevelAudio (level_full.audio): CATALOG, MIX, ZONES, REVERB_LAYER (physics layer 20);
+#                                cue_counts / last_stream / count(cue); silence()
+# data/transform/step_1..4.tres  transition_sfx = transform_crunch.wav
+```
+
+### Rules
+- The command_overlay addon is unchanged and portable. The game routes its flash to UI from outside.
+- The muffle follows `Overlay.is_active()` (all modes) and thaws over `Overlay.unfreeze_time` on `GameState.clock`, so it is real time.
+- Timed layers (metronome, heartbeat, pit bell, corridor events, prologue door) accumulate only while the tree is not paused, like the ladder. Ambience, hum and drone keep playing (muffled) under BLACK lines.
+- Own-body 3D sounds have distance attenuation disabled. Inverse-distance gain at about 1.5 m would hit `max_db` and override the mix table.
+- BAD DOG stops every LevelAudio layer, then plays the cut on UI. GameState's 3 s mute follows. The fall cut at 3.7 s silences everything before the finale.
+
+### Evidence produced in this run (not acceptance)
+- Native tests: 42 passed / 0 failed (37 prior + 5 F5), exit 0, no error/warning/leak lines. Portability: PASS (6 steps, 0 diagnostics).
+- Generator determinism: two full regenerations gave byte-identical SHA-256 for all 40 files.
+- Mix (fixture `tools/audio/mix_capture.gd`, headless Dummy driver 44.1 kHz, post-limiter Master): gameplay −17.06 LUFS integrated, −1.30 dBTP. Finale −17.37 LUFS, −2.74 dBTP. The GDScript BS.1770 meter agrees with ffmpeg `ebur128` (−23.18 vs −23.2 on an earlier capture). Captures are private in `evidence/f5/`.
+- **Not evidence of:** subjective quality (no listening was possible in this run), loudness on real output devices, or pit-hall/finale coverage within one continuous real-time capture.
+
 ## Later original phases (not removed)
 
-4 licensed environment + Blender MCP primitives; 5 audio layers/events/rooms/mix; 6 pressure/transform post-processing, camera and accessibility; 7 polish, complete 8–15 minute walkthrough, 5+ human playtest, target hardware FPS, Windows/Linux exports and release. Each phase requires build + walkthrough video and acceptance before the next.
+4 licensed environment + Blender MCP primitives; 5 audio layers/events/rooms/mix (source increment above); 6 pressure/transform post-processing, camera and accessibility; 7 polish, complete 8–15 minute walkthrough, 5+ human playtest, target hardware FPS, Windows/Linux exports and release. Each phase requires build + walkthrough video and acceptance before the next.
 
 ## Latest owner routing authorization
 

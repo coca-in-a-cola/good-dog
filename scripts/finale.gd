@@ -5,7 +5,14 @@ var elapsed := 0.0
 var last_tick := 0.0
 var label: Label
 var background: ColorRect
-const CREDITS_TEXT := "GOOD DOG\n\nGodot Engine — MIT\nBasic FPS Controller — Arjun Bhumula — MIT\nNoto Sans — The Noto Project Authors — OFL-1.1\nCamera shutter — artem_uanety — CC0\n\nPRESS ANY KEY"
+const CREDITS_TEXT := "GOOD DOG\n\nGodot Engine — MIT\nBasic FPS Controller — Arjun Bhumula — MIT\nNoto Sans — The Noto Project Authors — OFL-1.1\nCamera shutter — artem_uanety — CC0\nOther sounds — original synthesis — MIT\n\nPRESS ANY KEY"
+## GDD §5 bit 14 / §10: popper, confetti, children's applause, cheerful jingle.
+const SOUNDS := [
+	[preload("res://assets/audio/sfx/finale/popper_confetti.wav"), &"SFX", 2.0],
+	[preload("res://assets/audio/sfx/finale/applause_children.wav"), &"SFX", -2.0],
+	[preload("res://assets/audio/music/finale_jingle.wav"), &"Music", -1.0],
+]
+var players: Array[AudioStreamPlayer] = []
 
 func _layout_text() -> void:
 	# Node2D parents do not provide a Control anchor rectangle.
@@ -58,6 +65,18 @@ func _ready() -> void:
 	add_child(label)
 	get_viewport().size_changed.connect(_layout_text)
 	_layout_text()
+	for sound: Array in SOUNDS:
+		var player := AudioStreamPlayer.new()
+		player.stream = sound[0]
+		player.bus = sound[1]
+		player.volume_db = sound[2]
+		add_child(player)
+		player.play()
+		players.append(player)
+
+func _exit_tree() -> void:
+	for player in players:
+		player.stop()
 
 func _process(_delta: float) -> void:
 	var now := GameState.clock.now()

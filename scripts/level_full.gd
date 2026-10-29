@@ -15,11 +15,16 @@ var fall_elapsed := 0.0
 var cell_closed := false
 var observation_closed := false
 var pull_left := 0.0
+var audio: LevelAudio
 
 func _ready() -> void:
 	super()
 	_build_route()
 	preload("res://scripts/representative_art.gd").install(self)
+	audio = LevelAudio.new()
+	audio.name = "LevelAudio"
+	add_child(audio)
+	audio.bind(self)
 	player.interacted.connect(_interact)
 	director.bind_interactable(stick)
 	director.bind_interactable(place_zone)
