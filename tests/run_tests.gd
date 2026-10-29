@@ -4,9 +4,9 @@ extends SceneTree
 ## Optional user arg after `--`: suite script paths (default: SUITES).
 ## Exit code 0 = all assertions passed, 1 = failures.
 
-const SUITES := ["res://tests/test_command_overlay.gd", "res://tests/test_f2_core.gd", "res://tests/test_f3_route.gd", "res://tests/test_finale_layout.gd", "res://tests/test_f4_art.gd", "res://tests/test_f5_audio.gd", "res://tests/test_f6_camera_post.gd"]
+const SUITES := ["res://tests/test_command_overlay.gd", "res://tests/test_f2_core.gd", "res://tests/test_f3_route.gd", "res://tests/test_place_signage.gd", "res://tests/test_finale_layout.gd", "res://tests/test_f4_art.gd", "res://tests/test_f5_audio.gd", "res://tests/test_f6_camera_post.gd"]
 ## Route-driven suites run in a bounded fixed-step child process.
-const FIXED_STEP_SUITES := ["res://tests/test_f3_route.gd", "res://tests/test_f4_art.gd", "res://tests/test_f5_audio.gd"]
+const FIXED_STEP_SUITES := ["res://tests/test_f3_route.gd", "res://tests/test_place_signage.gd","res://tests/test_f4_art.gd", "res://tests/test_f5_audio.gd"]
 var watchdog_at := 0
 var active_test := ""
 

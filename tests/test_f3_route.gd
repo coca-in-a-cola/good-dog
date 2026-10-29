@@ -100,11 +100,32 @@ func grab() -> void:
 	await dismiss()
 	await look_pitch(0)
 
+func strafe_to(x: float, limit := 300) -> void:
+	Input.action_press(&"move_right")
+	for i in limit:
+		if level.player.position.x >= x:
+			break
+		if ov.is_active():
+			Input.action_release(&"move_right")
+			await dismiss()
+			Input.action_press(&"move_right")
+		await frames(1.0/60)
+	Input.action_release(&"move_right")
+	# Brake to a stop first: turning straight into forward would carry sideways inertia.
+	for i in 60:
+		if absf(level.player.velocity.x) < 0.01:
+			break
+		await frames(1.0/60)
+	check(level.player.position.x >= x,"strafe reached x %.2f actual %s" % [x,level.player.position])
+
 func place() -> void:
-	await walk_to(-24.2)
+	# Natural approach stops short of the 0.6 m pedestal collider at the mark.
+	await walk_to(-23.8)
 	key(KEY_E)
 	check(level.place_zone.done,"fresh E in circle placed stick")
 	await dismiss()
+	# The pedestal is solid: step around it toward the exit like a player would.
+	await strafe_to(0.6)
 
 func test_full_input_route_finale_credits_and_replay() -> void:
 	await start()

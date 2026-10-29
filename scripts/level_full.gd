@@ -16,6 +16,7 @@ var cell_closed := false
 var observation_closed := false
 var pull_left := 0.0
 var audio: LevelAudio
+var signage: Node3D
 
 func _ready() -> void:
 	super()
@@ -34,6 +35,8 @@ func _ready() -> void:
 	director.bind_interactable(place_zone)
 	director.bind_interactable(pit)
 	director.command_started.connect(_command_started)
+	director.pressure_changed.connect(_place_pressure)
+	director.failed.connect(signage.reset)
 	leash_ctl.leash_pulled.connect(func(_toward: Vector3) -> void:
 		pressure.nudge()
 		pull_left = 0.1)
@@ -43,6 +46,13 @@ func _command_started(_id: StringName) -> void:
 	stick.enabled = director.command.id == &"grab"
 	place_zone.enabled = director.command.id == &"place"
 	pit.enabled = director.command.id == &"jump"
+	signage.reset()
+
+## Only PLACE ladder rungs escalate the signage; praise's pressure 0 and other
+## commands never do. The director emits this as each PLACE order line is shown.
+func _place_pressure(level: int) -> void:
+	if director.command != null and director.command.id == &"place" and director.state != CommandDirector.State.SUCCESS:
+		signage.reveal(level)
 
 func _interact() -> void:
 	if director.state != CommandDirector.State.WAITING:
@@ -102,6 +112,7 @@ func _process(delta: float) -> void:
 	if reveal_left > 0.0:
 		reveal_left -= dt
 		observer.visible = reveal_left > 0.0
+	signage.advance(dt)
 	pull_left = maxf(pull_left - dt, 0.0)
 	player.camera.position.z = -pull_left * 0.6
 	if phase == &"falling":
@@ -243,8 +254,45 @@ func _build_route() -> void:
 	player.camera.add_child(mouth)
 	place_zone = _item(&"placed")
 	place_zone.area = _area(Vector3(0,0.7,-24.6),Vector3(2.5,1.4,2.5))
-	place_zone.visual = preload("res://scripts/representative_art.gd").asset(preload("res://assets/models/f4/bent_stick.glb"),self,Vector3(0,0.1,-24.6),"PlacedStick")
+	var pedestal := _box("Pedestal", Vector3(0,0.175,-24.6), Vector3(0.6,0.35,0.6), Color("7a8288"), true)
+	place_zone.visual = preload("res://scripts/representative_art.gd").asset(preload("res://assets/models/f4/bent_stick.glb"),self,Vector3(0,0.435,-24.6),"PlacedStick")
 	place_zone.visual.visible = false
+	var sign_label := Label3D.new()
+	sign_label.name = "PlacementLabel"
+	sign_label.text = "PLACE THE STICK HERE"
+	sign_label.font = preload("res://addons/command_overlay/assets/fonts/NotoSans-Regular.ttf")
+	sign_label.font_size = 48
+	sign_label.pixel_size = 0.003
+	sign_label.modulate = Color("e53935")
+	sign_label.outline_size = 0
+	sign_label.no_depth_test = false
+	sign_label.position = Vector3(0, 1.8, -24.6)
+	add_child(sign_label)
+	var arrow := Node3D.new()
+	arrow.name = "PlacementArrow"
+	arrow.position = Vector3(0, 1.35, -24.6)
+	var arrow_mat := _material(Color("e53935"), true)
+	var stem := MeshInstance3D.new()
+	stem.name = "ArrowStem"
+	var stem_mesh := BoxMesh.new()
+	stem_mesh.size = Vector3(0.06, 0.22, 0.02)
+	stem.mesh = stem_mesh
+	stem.material_override = arrow_mat
+	stem.position = Vector3(0, 0.11, 0)
+	arrow.add_child(stem)
+	var head := MeshInstance3D.new()
+	head.name = "ArrowHead"
+	var head_mesh := PrismMesh.new()
+	head_mesh.size = Vector3(0.24, 0.18, 0.02)
+	head.mesh = head_mesh
+	head.material_override = arrow_mat
+	head.rotation.z = PI
+	head.position = Vector3(0, -0.09, 0)
+	arrow.add_child(head)
+	add_child(arrow)
+	signage = preload("res://scripts/place_signage.gd").new()
+	signage.name = "PlaceSignage"
+	add_child(signage)
 	var circle := CSGCylinder3D.new()
 	circle.radius = 1.25
 	circle.height = 0.008

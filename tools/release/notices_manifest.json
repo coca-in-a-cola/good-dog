@@ -1,0 +1,16 @@
+{
+  "comment": "Files that must sit beside the exported executable (Linux and Windows), not only inside the PCK. Sources are copied byte-for-byte; never edit or relicense them. 'generated' entries are written verbatim from the running Godot engine, which must match the export-template version.",
+  "godot_version": "4.7.2.stable",
+  "files": [
+    {"src": "LICENSE", "dest": "LICENSE", "license": "MIT (GOOD DOG original work; scope/exceptions inside)"},
+    {"src": "THIRD_PARTY.md", "dest": "THIRD_PARTY.md", "license": "provenance index"},
+    {"src": "addons/command_overlay/assets/fonts/OFL.txt", "dest": "licenses/NotoSans-OFL.txt", "license": "OFL-1.1"},
+    {"src": "assets/fonts/OFL.txt", "dest": "licenses/BebasNeue-OFL.txt", "license": "OFL-1.1"},
+    {"src": "addons/basic_fps_controller/LICENSE.txt", "dest": "licenses/basic-fps-controller-MIT.txt", "license": "MIT"},
+    {"src": "addons/command_overlay/assets/sfx/PROVENANCE.md", "dest": "licenses/camera-flash-CC0-PROVENANCE.md", "license": "CC0-1.0 provenance"}
+  ],
+  "generated": [
+    {"kind": "godot_license", "dest": "licenses/GODOT-LICENSE.txt", "license": "MIT (Godot Engine)"},
+    {"kind": "godot_copyright", "dest": "licenses/GODOT-COPYRIGHT.txt", "license": "Godot bundled third-party notices"}
+  ]
+}
