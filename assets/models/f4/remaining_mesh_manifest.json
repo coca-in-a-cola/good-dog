@@ -1,0 +1,131 @@
+{
+  "units": "metres",
+  "objects": [
+    {
+      "name": "Hanging collar strap",
+      "triangles": 320,
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "name": "Collar buckle",
+      "triangles": 108,
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "name": "Collar hook",
+      "triangles": 60,
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "name": "Hook backplate",
+      "triangles": 108,
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "name": "CCTV enamel hood",
+      "triangles": 108,
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "name": "CCTV graphite face",
+      "triangles": 108,
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "name": "CCTV lens barrel",
+      "triangles": 60,
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "name": "CCTV optical glass",
+      "triangles": 60,
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "name": "CCTV visor",
+      "triangles": 108,
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "name": "Ceiling camera mounting plate",
+      "triangles": 108,
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "name": "Ceiling camera stalk",
+      "triangles": 60,
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "name": "Flush pit lip",
+      "triangles": 256,
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "name": "Vertical black shaft lining",
+      "triangles": 128,
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "name": "Institution bowl",
+      "triangles": 768,
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    }
+  ]
+}

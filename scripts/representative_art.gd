@@ -42,6 +42,9 @@ static func install(level: Node3D) -> void:
 		material.shading_mode = BaseMaterial3D.SHADING_MODE_UNSHADED
 		child.material_override = material
 	clinical_finish(level)
+	var remaining := preload("res://scripts/remaining_art.gd").new()
+	remaining.name = "ObservationPitArt"
+	level.add_child(remaining)
 
 static func surface(color: String, rough: float, metal := 0.0) -> StandardMaterial3D:
 	var m := StandardMaterial3D.new()
