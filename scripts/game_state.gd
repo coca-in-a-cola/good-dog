@@ -29,6 +29,14 @@ var _pause_layer: CanvasLayer
 var _curtain_layer: CanvasLayer
 var _obey: Button
 var _run_away: Button
+var _pause_slider: HSlider
+var _pause_slider_label: Label:
+	get:
+		if _pause_slider != null:
+			return _pause_slider.get_node_or_null("Label") as Label
+		return null
+	set(_val):
+		pass
 
 
 func _ready() -> void:
@@ -126,7 +134,11 @@ func _change(path: String, new_state: StringName) -> void:
 	_set_paused(false)
 	_fail_at = -1.0
 	_curtain_layer.visible = false
-	AudioServer.set_bus_mute(0, false)
+	var am := get_node_or_null(^"/root/AudioMix")
+	if am != null and am.master_volume <= 0.0:
+		AudioServer.set_bus_mute(0, true)
+	else:
+		AudioServer.set_bus_mute(0, false)
 	Engine.time_scale = 1.0
 	for action in InputMap.get_actions():
 		Input.action_release(action)
@@ -149,6 +161,10 @@ func _set_paused(on: bool) -> void:
 	_pause_layer.visible = on
 	get_tree().paused = on
 	if on:
+		var am := get_node_or_null(^"/root/AudioMix")
+		if am != null and _pause_slider != null:
+			_pause_slider.set_value_no_signal(am.master_volume)
+			_update_pause_slider_label(am.master_volume)
 		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 		_obey.grab_focus()
 
@@ -197,9 +213,62 @@ func _build_ui() -> void:
 	dim.add_child(box)
 	_obey = _menu_button("OBEY", resume)
 	_run_away = _menu_button("RUN AWAY", run_away)
+
+	var sb_focus := StyleBoxFlat.new()
+	sb_focus.draw_center = false
+	sb_focus.border_width_left = 2
+	sb_focus.border_width_top = 2
+	sb_focus.border_width_right = 2
+	sb_focus.border_width_bottom = 2
+	sb_focus.border_color = Color(0.13, 0.83, 0.93, 1)
+
+	var master_volume_slider_script := preload("res://scripts/ui/master_volume_slider.gd")
+	_pause_slider = master_volume_slider_script.new()
+	_pause_slider.name = "MasterVolume"
+	_pause_slider.custom_minimum_size = Vector2(360, 52)
+	_pause_slider.min_value = 0.0
+	_pause_slider.max_value = 100.0
+	_pause_slider.step = 1.0
+	_pause_slider.add_theme_stylebox_override(&"focus", sb_focus)
+
+	var am := get_node_or_null(^"/root/AudioMix")
+	var initial_vol: float = am.master_volume if am != null else 100.0
+	_pause_slider.set_value_no_signal(initial_vol)
+
+	_pause_slider.value_changed.connect(func(val: float) -> void:
+		var audio := get_node_or_null(^"/root/AudioMix")
+		if audio != null:
+			audio.set_master_volume(val)
+	)
+	if am != null:
+		am.master_volume_changed.connect(_on_master_volume_changed)
+
 	box.add_child(_obey)
+	box.add_child(_pause_slider)
 	box.add_child(_run_away)
 	add_child(_pause_layer)
+	_update_pause_slider_label(initial_vol)
+
+	_obey.focus_neighbor_top = _run_away.get_path()
+	_obey.focus_neighbor_bottom = _pause_slider.get_path()
+	_pause_slider.focus_neighbor_top = _obey.get_path()
+	_pause_slider.focus_neighbor_bottom = _run_away.get_path()
+	_run_away.focus_neighbor_top = _pause_slider.get_path()
+	_run_away.focus_neighbor_bottom = _obey.get_path()
+
+
+func _on_master_volume_changed(vol: float) -> void:
+	if _pause_slider != null:
+		_pause_slider.set_value_no_signal(vol)
+		_update_pause_slider_label(vol)
+
+
+func _update_pause_slider_label(vol: float = -1.0) -> void:
+	if _pause_slider != null and _pause_slider.has_method("_update_visuals"):
+		_pause_slider._update_visuals()
+	elif _pause_slider_label != null:
+		var v: float = vol if vol >= 0.0 else (_pause_slider.value if _pause_slider != null else 100.0)
+		_pause_slider_label.text = "MASTER VOLUME · %d%%" % int(round(v))
 
 
 func _menu_button(text: String, action: Callable) -> Button:

@@ -24,11 +24,47 @@ var director: CommandDirector
 var events: Array[String] = []
 var ov: Node
 var nodes: Array[Node] = []
+var orig_settings_bytes := PackedByteArray()
+var orig_settings_existed := false
+var orig_master_volume := 100.0
+var orig_master_muted := false
+var orig_master_db := 0.0
 
 
 # --- Fixture ------------------------------------------------------------------
 
+func _backup_settings_and_audio() -> void:
+	orig_master_volume = AudioMix.master_volume
+	var idx := AudioServer.get_bus_index(&"Master")
+	orig_master_muted = AudioServer.is_bus_mute(idx) if idx >= 0 else false
+	orig_master_db = AudioServer.get_bus_volume_db(idx) if idx >= 0 else 0.0
+	orig_settings_existed = FileAccess.file_exists("user://settings.cfg")
+	if orig_settings_existed:
+		orig_settings_bytes = FileAccess.get_file_as_bytes("user://settings.cfg")
+	else:
+		orig_settings_bytes = PackedByteArray()
+
+
+func _restore_settings_and_audio() -> void:
+	var idx := AudioServer.get_bus_index(&"Master")
+	AudioMix.set_master_volume(orig_master_volume, false)
+	if idx >= 0:
+		AudioServer.set_bus_mute(idx, orig_master_muted)
+		AudioServer.set_bus_volume_db(idx, orig_master_db)
+	if orig_settings_existed:
+		var f := FileAccess.open("user://settings.cfg", FileAccess.WRITE)
+		if f != null:
+			f.store_buffer(orig_settings_bytes)
+			f.close()
+	else:
+		if FileAccess.file_exists("user://settings.cfg"):
+			var dir := DirAccess.open("user://")
+			if dir != null and dir.file_exists("settings.cfg"):
+				dir.remove("settings.cfg")
+
+
 func before_each() -> void:
+	_backup_settings_and_audio()
 	failures.clear()
 	assertions = 0
 	events.clear()
@@ -62,6 +98,7 @@ func after_each() -> void:
 	await get_tree().process_frame
 	ov.use_manual_clock = false
 	GameState.clock.manual = false
+	_restore_settings_and_audio()
 
 
 func _new_director() -> CommandDirector:
@@ -160,6 +197,7 @@ func test_production_menu_all_toggle_state_colors_are_legible() -> void:
 	var bg: Color = menu.get_node("Background").color
 	var bg_linear := bg.srgb_to_linear()
 	var bg_lum := 0.2126 * bg_linear.r + 0.7152 * bg_linear.g + 0.0722 * bg_linear.b
+	check(bg_lum < 0.1, "dark background luminance < 0.1 (got %.4f)" % bg_lum)
 	for path in ["Box/ReduceFlashes", "Box/ReduceShake"]:
 		var toggle: CheckButton = menu.get_node(path)
 		for key in ["font_color", "font_hover_color", "font_pressed_color", "font_hover_pressed_color",
@@ -167,7 +205,8 @@ func test_production_menu_all_toggle_state_colors_are_legible() -> void:
 			check(toggle.has_theme_color_override(key), path + " explicit " + key)
 			var linear := toggle.get_theme_color(key).srgb_to_linear()
 			var lum := 0.2126 * linear.r + 0.7152 * linear.g + 0.0722 * linear.b
-			check((bg_lum + 0.05) / (lum + 0.05) >= 4.5, path + " contrast " + key)
+			var contrast := (lum + 0.05) / (bg_lum + 0.05) if lum >= bg_lum else (bg_lum + 0.05) / (lum + 0.05)
+			check(contrast >= 4.5, path + " contrast " + key + " (got %.2f)" % contrast)
 
 func test_command_transform_and_pressure_data() -> void:
 	eq(BARK.id, &"bark", "command id")
@@ -177,6 +216,12 @@ func test_command_transform_and_pressure_data() -> void:
 	eq(BARK.transform_step, 1, "transform step after BARK")
 	eq(BARK.order_line.mode, OverlayLine.Mode.BLACK, "rung 1 BLACK")
 	eq(BARK.order_line.text, "BARK.", "exact order text")
+	var grab_cmd: Command = load("res://data/commands/grab.tres")
+	var place_cmd: Command = load("res://data/commands/place.tres")
+	var jump_cmd: Command = load("res://data/commands/jump.tres")
+	eq(grab_cmd.order_line.mode, OverlayLine.Mode.BLACK, "grab rung 1 BLACK")
+	eq(place_cmd.order_line.mode, OverlayLine.Mode.BLACK, "place rung 1 BLACK")
+	eq(jump_cmd.order_line.mode, OverlayLine.Mode.BLACK, "jump rung 1 BLACK")
 	eq(BARK.escalation_lines.size(), 5, "escalation lines for rungs 2–6")
 	eq(BARK.line_for_rung(1).mode, OverlayLine.Mode.OVER_WORLD, "rung 2 OVER_WORLD")
 	eq(BARK.line_for_rung(3).get_words(), PackedStringArray(["BARK.", "NOW."]), "rung 4 per-word BARK. NOW.")
@@ -602,3 +647,167 @@ func test_menu_restart_failure_cycles_reset_everything() -> void:
 	ov.dismissed.emit(&"bark_r1")  # stale signal after all restarts: nothing listens any more
 	eq(ov.dismissed.get_connections().size(), baseline - 1, "only menu-time connections remain")
 	get_tree().unload_current_scene()
+
+
+func test_master_volume_clamp_bus_and_mute() -> void:
+	AudioMix.set_master_volume(100.0, false)
+	eq(AudioMix.master_volume, 100.0, "default master volume is 100")
+	var idx := AudioServer.get_bus_index(&"Master")
+	near(AudioServer.get_bus_volume_db(idx), 0.0, 0.01, "100% is 0 dB")
+	check(not AudioServer.is_bus_mute(idx), "100% is not muted")
+
+	AudioMix.set_master_volume(50.0, false)
+	eq(AudioMix.master_volume, 50.0, "master volume set to 50")
+	near(AudioServer.get_bus_volume_db(idx), linear_to_db(0.5), 0.01, "50% is linear_to_db(0.5)")
+	check(not AudioServer.is_bus_mute(idx), "50% is not muted")
+
+	AudioMix.set_master_volume(0.0, false)
+	eq(AudioMix.master_volume, 0.0, "master volume set to 0")
+	check(AudioServer.is_bus_mute(idx), "0% mutes master bus")
+
+	# Clamping tests
+	AudioMix.set_master_volume(150.0, false)
+	eq(AudioMix.master_volume, 100.0, "clamped to 100 on overflow")
+	near(AudioServer.get_bus_volume_db(idx), 0.0, 0.01, "clamped 100 is 0 dB")
+	check(not AudioServer.is_bus_mute(idx), "overflow clamp is not muted")
+
+	AudioMix.set_master_volume(-25.0, false)
+	eq(AudioMix.master_volume, 0.0, "clamped to 0 on underflow")
+	check(AudioServer.is_bus_mute(idx), "underflow clamp mutes master bus")
+
+
+func test_master_volume_sync_menus_and_persistence() -> void:
+	AudioMix.set_master_volume(100.0, true)
+	var menu := load("res://scenes/main_menu.tscn").instantiate() as Control
+	add_child(menu)
+	nodes.append(menu)
+	await get_tree().process_frame
+
+	var slider: HSlider = menu.get_node("Box/MasterVolume")
+	var label: Label = menu.get_node("Box/MasterVolume/Label")
+	eq(slider.value, 100.0, "main menu slider starts at 100")
+	eq(label.text, "MASTER VOLUME · 100%", "main menu label starts at 100%")
+
+	# Main menu slider adjusts volume
+	slider.value = 75.0
+	await get_tree().process_frame
+	eq(AudioMix.master_volume, 75.0, "slider adjust sets AudioMix master_volume to 75")
+	eq(label.text, "MASTER VOLUME · 75%", "main menu label updates to 75%")
+
+	# In-game pause menu slider is synced
+	var pause_slider: HSlider = GameState._pause_slider
+	var pause_label: Label = GameState._pause_slider_label
+	check(pause_slider != null, "GameState pause slider exists")
+	eq(pause_slider.value, 75.0, "pause slider synced to 75")
+	eq(pause_label.text, "MASTER VOLUME · 75%", "pause label synced to 75%")
+
+	# Pause menu slider adjusts volume and syncs back to menu
+	pause_slider.value = 40.0
+	await get_tree().process_frame
+	eq(AudioMix.master_volume, 40.0, "pause slider adjust sets AudioMix master_volume to 40")
+	eq(slider.value, 40.0, "main menu slider synced to 40 without loops")
+	eq(label.text, "MASTER VOLUME · 40%", "main menu label synced to 40%")
+
+	# ConfigFile persistence
+	var cfg := ConfigFile.new()
+	eq(cfg.load("user://settings.cfg"), OK, "user://settings.cfg loaded successfully")
+	eq(float(cfg.get_value("audio", "master_volume", -1.0)), 40.0, "master_volume 40 persisted in settings.cfg")
+
+	# AudioMix.reset() must NOT reset master volume
+	AudioMix.reset()
+	eq(AudioMix.master_volume, 40.0, "AudioMix.reset() does not reset master volume")
+
+	# Reload from settings.cfg
+	AudioMix.master_volume = 100.0
+	AudioMix.load_settings()
+	eq(AudioMix.master_volume, 40.0, "load_settings restored persisted 40")
+
+
+func test_settings_sentinel_preservation() -> void:
+	var outer_existed := orig_settings_existed
+	var outer_bytes := orig_settings_bytes
+	var outer_vol := orig_master_volume
+	var outer_muted := orig_master_muted
+	var outer_db := orig_master_db
+
+	var sentinel_path := "user://settings.cfg"
+	var sentinel_cfg := ConfigFile.new()
+	sentinel_cfg.set_value("sentinel_section", "sentinel_key", "sentinel_value_42")
+	sentinel_cfg.set_value("audio", "master_volume", 88.0)
+	sentinel_cfg.save(sentinel_path)
+
+	_backup_settings_and_audio()
+	check(orig_settings_existed, "backup captured existing settings file")
+	check(orig_settings_bytes.size() > 0, "backup captured non-empty settings bytes")
+
+	AudioMix.set_master_volume(33.0, true)
+	var mutated_cfg := ConfigFile.new()
+	eq(mutated_cfg.load(sentinel_path), OK, "settings loaded after mutation")
+	eq(float(mutated_cfg.get_value("audio", "master_volume", -1.0)), 33.0, "mutated volume saved")
+
+	_restore_settings_and_audio()
+
+	var restored_cfg := ConfigFile.new()
+	eq(restored_cfg.load(sentinel_path), OK, "settings loaded after restore")
+	eq(String(restored_cfg.get_value("sentinel_section", "sentinel_key", "")), "sentinel_value_42", "sentinel key preserved")
+	eq(float(restored_cfg.get_value("audio", "master_volume", -1.0)), 88.0, "original master_volume restored")
+
+	orig_settings_existed = outer_existed
+	orig_settings_bytes = outer_bytes
+	orig_master_volume = outer_vol
+	orig_master_muted = outer_muted
+	orig_master_db = outer_db
+
+
+func test_master_volume_slider_regression_visuals_and_anchors() -> void:
+	var menu := load("res://scenes/main_menu.tscn").instantiate() as Control
+	add_child(menu)
+	nodes.append(menu)
+	await get_tree().process_frame
+
+	var menu_slider: HSlider = menu.get_node("Box/MasterVolume")
+	var pause_slider: HSlider = GameState._pause_slider
+	check(menu_slider != null, "menu slider exists")
+	check(pause_slider != null, "pause slider exists")
+
+	# Production mainmenu and pause use same script
+	var expected_script := preload("res://scripts/ui/master_volume_slider.gd")
+	eq(menu_slider.get_script(), expected_script, "main menu slider uses master_volume_slider script")
+	eq(pause_slider.get_script(), expected_script, "pause slider uses master_volume_slider script")
+
+	var slider := menu_slider
+	var clip_container: Control = slider.get_node("ClipContainer")
+	var base_label: Label = slider.get_node("Label")
+	var clip_label: Label = slider.get_node("ClipContainer/ClipLabel")
+	check(clip_container != null, "ClipContainer exists")
+	check(base_label != null, "base Label exists")
+	check(clip_label != null, "ClipLabel exists")
+
+	# Fullwidth identical alignment and mouse filters
+	eq(base_label.horizontal_alignment, clip_label.horizontal_alignment, "two labels have identical horizontal alignment")
+	eq(base_label.vertical_alignment, clip_label.vertical_alignment, "two labels have identical vertical alignment")
+	eq(base_label.horizontal_alignment, HORIZONTAL_ALIGNMENT_CENTER, "labels are horizontally centered")
+	eq(base_label.vertical_alignment, VERTICAL_ALIGNMENT_CENTER, "labels are vertically centered")
+	eq(base_label.mouse_filter, Control.MOUSE_FILTER_IGNORE, "base label ignores mouse")
+	eq(clip_label.mouse_filter, Control.MOUSE_FILTER_IGNORE, "clip label ignores mouse")
+	eq(base_label.mouse_filter, clip_label.mouse_filter, "two labels have identical mouse filter")
+	eq(clip_container.mouse_filter, Control.MOUSE_FILTER_IGNORE, "clip container ignores mouse")
+
+	# Test 0, 50, 100 volume levels
+	var test_values := [0.0, 50.0, 100.0]
+	for val in test_values:
+		slider.value = val
+		await get_tree().process_frame
+
+		var fraction: float = (val - slider.min_value) / (slider.max_value - slider.min_value)
+		var expected_w: float = slider.size.x * fraction
+		near(clip_container.size.x, expected_w, 0.01, "ClipContainer.size.x == slider.size.x * fraction at %d" % int(val))
+
+		var pct := int(round(val))
+		var expected_text := "MASTER VOLUME · %d%%" % pct
+		eq(base_label.text, expected_text, "base label text at %d%%" % pct)
+		eq(clip_label.text, expected_text, "clip label text at %d%%" % pct)
+		eq(base_label.text, clip_label.text, "two labels identical text at %d%%" % pct)
+
+		near(base_label.size.x, slider.size.x, 0.01, "base label is fullwidth at %d%%" % pct)
+		near(clip_label.size.x, slider.size.x, 0.01, "clip label is fullwidth at %d%%" % pct)

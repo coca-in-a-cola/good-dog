@@ -4,6 +4,6 @@
 script = ExtResource("1")
 id = &"place_r1"
 text = "PLACE THE STICK HERE."
-mode = 1
+mode = 0
 per_word = false
 word_interval = 0.4

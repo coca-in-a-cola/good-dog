@@ -19,6 +19,8 @@ func _ready() -> void:
 			mesh.material_override = ART.surface("000000",.8)
 			mesh.material_override.shading_mode = BaseMaterial3D.SHADING_MODE_UNSHADED
 			mesh.material_override.cull_mode = BaseMaterial3D.CULL_DISABLED
+		if mesh.name == "Flush pit lip":
+			mesh.position.y += .003
 	var pit_cap := MeshInstance3D.new()
 	pit_cap.name = "PitBottomCap"
 	var cap_mesh := CylinderMesh.new()

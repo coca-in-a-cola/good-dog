@@ -1,6 +1,135 @@
-[gd_scene load_steps=2 format=3]
+[gd_scene load_steps=22 format=3]
 
 [ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_menu"]
+[ext_resource type="FontFile" path="res://assets/fonts/BebasNeue-Regular.ttf" id="2_bebas"]
+[ext_resource type="FontFile" path="res://addons/command_overlay/assets/fonts/NotoSans-Regular.ttf" id="4_noto_reg"]
+[ext_resource type="Texture2D" path="res://assets/ui/switch_on.png" id="5_sw_on"]
+[ext_resource type="Texture2D" path="res://assets/ui/switch_off.png" id="6_sw_off"]
+[ext_resource type="Texture2D" path="res://assets/ui/switch_on_disabled.png" id="7_sw_on_dis"]
+[ext_resource type="Texture2D" path="res://assets/ui/switch_off_disabled.png" id="8_sw_off_dis"]
+[ext_resource type="Script" path="res://scripts/ui/master_volume_slider.gd" id="9_slider"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_start_normal"]
+bg_color = Color(0.08, 0.09, 0.11, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.28, 0.32, 0.38, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_start_hover"]
+bg_color = Color(0.94, 0.95, 0.97, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_start_pressed"]
+bg_color = Color(0.13, 0.83, 0.93, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.13, 0.83, 0.93, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_start_focus"]
+bg_color = Color(0.08, 0.09, 0.11, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.13, 0.83, 0.93, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_slider_bg"]
+content_margin_top = 8.0
+content_margin_bottom = 8.0
+bg_color = Color(0.12, 0.14, 0.17, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_slider_fill"]
+content_margin_top = 8.0
+content_margin_bottom = 8.0
+bg_color = Color(0.13, 0.83, 0.93, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_slider_focus"]
+draw_center = false
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.13, 0.83, 0.93, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_toggle_normal"]
+content_margin_left = 16.0
+content_margin_right = 16.0
+bg_color = Color(0.06, 0.07, 0.085, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.2, 0.22, 0.26, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_toggle_hover"]
+content_margin_left = 16.0
+content_margin_right = 16.0
+bg_color = Color(0.09, 0.1, 0.12, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.35, 0.4, 0.48, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_toggle_focus"]
+content_margin_left = 16.0
+content_margin_right = 16.0
+bg_color = Color(0.06, 0.07, 0.085, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.13, 0.83, 0.93, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_toggle_pressed"]
+content_margin_left = 16.0
+content_margin_right = 16.0
+bg_color = Color(0.07, 0.09, 0.11, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.13, 0.83, 0.93, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_quit_normal"]
+bg_color = Color(0.08, 0.09, 0.11, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.24, 0.27, 0.32, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_quit_hover"]
+bg_color = Color(0.24, 0.07, 0.08, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.88, 0.24, 0.25, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_quit_pressed"]
+bg_color = Color(0.6, 0.15, 0.16, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.95, 0.3, 0.32, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_quit_focus"]
+bg_color = Color(0.08, 0.09, 0.11, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.13, 0.83, 0.93, 1)
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -18,19 +147,27 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.9137255, 0.93333334, 0.9411765, 1)
+color = Color(0.043, 0.047, 0.055, 1)
 
 [node name="Title" type="Label" parent="."]
 layout_mode = 1
-anchors_preset = 10
-anchor_right = 1.0
-offset_top = 140.0
-offset_bottom = 300.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -300.0
+offset_top = -280.0
+offset_right = 300.0
+offset_bottom = -110.0
 grow_horizontal = 2
-theme_override_colors/font_color = Color(0.1, 0.1, 0.1, 1)
-theme_override_font_sizes/font_size = 120
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.95, 0.96, 0.97, 1)
+theme_override_fonts/font = ExtResource("2_bebas")
+theme_override_font_sizes/font_size = 148
 text = "GOOD DOG"
 horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Box" type="VBoxContainer" parent="."]
 layout_mode = 1
@@ -39,44 +176,96 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -220.0
-offset_top = -40.0
-offset_right = 220.0
-offset_bottom = 300.0
+offset_left = -260.0
+offset_top = -90.0
+offset_right = 260.0
+offset_bottom = 290.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/separation = 18
+theme_override_constants/separation = 16
 
 [node name="Start" type="Button" parent="Box"]
 custom_minimum_size = Vector2(0, 72)
 layout_mode = 2
-theme_override_font_sizes/font_size = 40
+theme_override_colors/font_color = Color(0.94, 0.95, 0.97, 1)
+theme_override_colors/font_pressed_color = Color(0.06, 0.07, 0.08, 1)
+theme_override_colors/font_hover_color = Color(0.06, 0.07, 0.08, 1)
+theme_override_colors/font_focus_color = Color(0.13, 0.83, 0.93, 1)
+theme_override_fonts/font = ExtResource("2_bebas")
+theme_override_font_sizes/font_size = 44
+theme_override_styles/normal = SubResource("StyleBoxFlat_start_normal")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_start_pressed")
+theme_override_styles/hover = SubResource("StyleBoxFlat_start_hover")
+theme_override_styles/focus = SubResource("StyleBoxFlat_start_focus")
 text = "START"
 
-[node name="ReduceFlashes" type="CheckButton" parent="Box"]
+[node name="MasterVolume" type="HSlider" parent="Box"]
+custom_minimum_size = Vector2(0, 52)
 layout_mode = 2
-theme_override_colors/font_color = Color(0.1, 0.1, 0.1, 1)
-theme_override_colors/font_hover_color = Color(0.1, 0.1, 0.1, 1)
-theme_override_colors/font_pressed_color = Color(0.1, 0.1, 0.1, 1)
-theme_override_colors/font_hover_pressed_color = Color(0.1, 0.1, 0.1, 1)
-theme_override_colors/font_focus_color = Color(0.1, 0.1, 0.1, 1)
-theme_override_colors/font_disabled_color = Color(0.1, 0.1, 0.1, 1)
-theme_override_font_sizes/font_size = 26
+theme_override_styles/slider = SubResource("StyleBoxFlat_slider_bg")
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_slider_fill")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_slider_fill")
+theme_override_styles/focus = SubResource("StyleBoxFlat_slider_focus")
+max_value = 100.0
+step = 1.0
+value = 100.0
+script = ExtResource("9_slider")
+
+[node name="ReduceFlashes" type="CheckButton" parent="Box"]
+custom_minimum_size = Vector2(0, 52)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.88, 0.9, 0.93, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0.13, 0.83, 0.93, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.4, 0.91, 0.98, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/font_disabled_color = Color(0.6, 0.64, 0.68, 1)
+theme_override_fonts/font = ExtResource("4_noto_reg")
+theme_override_font_sizes/font_size = 20
+theme_override_icons/switch_on = ExtResource("5_sw_on")
+theme_override_icons/switch_off = ExtResource("6_sw_off")
+theme_override_icons/switch_on_disabled = ExtResource("7_sw_on_dis")
+theme_override_icons/switch_off_disabled = ExtResource("8_sw_off_dis")
+theme_override_styles/normal = SubResource("StyleBoxFlat_toggle_normal")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_toggle_pressed")
+theme_override_styles/hover = SubResource("StyleBoxFlat_toggle_hover")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_toggle_hover")
+theme_override_styles/focus = SubResource("StyleBoxFlat_toggle_focus")
 text = "Reduce flashes"
 
 [node name="ReduceShake" type="CheckButton" parent="Box"]
+custom_minimum_size = Vector2(0, 52)
 layout_mode = 2
-theme_override_colors/font_color = Color(0.1, 0.1, 0.1, 1)
-theme_override_colors/font_hover_color = Color(0.1, 0.1, 0.1, 1)
-theme_override_colors/font_pressed_color = Color(0.1, 0.1, 0.1, 1)
-theme_override_colors/font_hover_pressed_color = Color(0.1, 0.1, 0.1, 1)
-theme_override_colors/font_focus_color = Color(0.1, 0.1, 0.1, 1)
-theme_override_colors/font_disabled_color = Color(0.1, 0.1, 0.1, 1)
-theme_override_font_sizes/font_size = 26
+theme_override_colors/font_color = Color(0.88, 0.9, 0.93, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0.13, 0.83, 0.93, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.4, 0.91, 0.98, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/font_disabled_color = Color(0.6, 0.64, 0.68, 1)
+theme_override_fonts/font = ExtResource("4_noto_reg")
+theme_override_font_sizes/font_size = 20
+theme_override_icons/switch_on = ExtResource("5_sw_on")
+theme_override_icons/switch_off = ExtResource("6_sw_off")
+theme_override_icons/switch_on_disabled = ExtResource("7_sw_on_dis")
+theme_override_icons/switch_off_disabled = ExtResource("8_sw_off_dis")
+theme_override_styles/normal = SubResource("StyleBoxFlat_toggle_normal")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_toggle_pressed")
+theme_override_styles/hover = SubResource("StyleBoxFlat_toggle_hover")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_toggle_hover")
+theme_override_styles/focus = SubResource("StyleBoxFlat_toggle_focus")
 text = "Reduce shake"
 
 [node name="Quit" type="Button" parent="Box"]
-custom_minimum_size = Vector2(0, 60)
+custom_minimum_size = Vector2(0, 56)
 layout_mode = 2
-theme_override_font_sizes/font_size = 32
+theme_override_colors/font_color = Color(0.82, 0.84, 0.88, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(0.13, 0.83, 0.93, 1)
+theme_override_fonts/font = ExtResource("2_bebas")
+theme_override_font_sizes/font_size = 36
+theme_override_styles/normal = SubResource("StyleBoxFlat_quit_normal")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_quit_pressed")
+theme_override_styles/hover = SubResource("StyleBoxFlat_quit_hover")
+theme_override_styles/focus = SubResource("StyleBoxFlat_quit_focus")
 text = "QUIT"

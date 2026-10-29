@@ -17,6 +17,15 @@ const OPEN_HZ := 20000.0
 ## Bus volumes restored to their layout values on every fresh scene (fades never
 ## leak into a restart).
 const RESET_BUSES: Array[StringName] = [&"SFX", &"Ambience", &"UI", &"Music"]
+const SETTINGS_PATH := "user://settings.cfg"
+
+signal master_volume_changed(volume: float)
+
+var master_volume: float = 100.0:
+	set(val):
+		var clamped := clampf(val, 0.0, 100.0)
+		master_volume = clamped
+		_apply_master_volume()
 
 var _layout_db := {}
 var _muffled := false
@@ -39,6 +48,7 @@ func _ready() -> void:
 		var idx := AudioServer.get_bus_index(bus)
 		if idx >= 0:
 			_layout_db[bus] = AudioServer.get_bus_volume_db(idx)
+	load_settings()
 	reset()
 
 
@@ -88,6 +98,42 @@ func fade_bus(bus: StringName, to_db: float, seconds: float) -> void:
 		AudioServer.set_bus_volume_db(idx, to_db)
 		return
 	_fades[bus] = {from = AudioServer.get_bus_volume_db(idx), to = to_db, start = _now(), time = seconds}
+
+
+func set_master_volume(vol: float, save: bool = true) -> void:
+	var clamped := clampf(vol, 0.0, 100.0)
+	master_volume = clamped
+	_apply_master_volume()
+	if save:
+		save_settings()
+	master_volume_changed.emit(master_volume)
+
+
+func load_settings() -> void:
+	var cfg := ConfigFile.new()
+	if cfg.load(SETTINGS_PATH) == OK:
+		if cfg.has_section_key("audio", "master_volume"):
+			master_volume = clampf(float(cfg.get_value("audio", "master_volume", 100.0)), 0.0, 100.0)
+	_apply_master_volume()
+
+
+func save_settings() -> void:
+	var cfg := ConfigFile.new()
+	cfg.load(SETTINGS_PATH)
+	cfg.set_value("audio", "master_volume", master_volume)
+	cfg.save(SETTINGS_PATH)
+
+
+func _apply_master_volume() -> void:
+	var idx := AudioServer.get_bus_index(&"Master")
+	if idx < 0:
+		idx = 0
+	if master_volume <= 0.0:
+		AudioServer.set_bus_mute(idx, true)
+		AudioServer.set_bus_volume_db(idx, -80.0)
+	else:
+		AudioServer.set_bus_mute(idx, false)
+		AudioServer.set_bus_volume_db(idx, linear_to_db(master_volume / 100.0))
 
 
 ## Snaps every managed bus back to its neutral state.

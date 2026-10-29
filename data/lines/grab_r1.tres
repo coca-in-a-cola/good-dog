@@ -4,6 +4,6 @@
 script = ExtResource("1")
 id = &"grab_r1"
 text = "NOW. GRAB THE STICK."
-mode = 1
+mode = 0
 per_word = true
 word_interval = 0.4

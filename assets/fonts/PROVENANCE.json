@@ -1,0 +1,20 @@
+{
+  "fonts": [
+    {
+      "name": "Bebas Neue Regular",
+      "path": "res://assets/fonts/BebasNeue-Regular.ttf",
+      "license": "OFL-1.1",
+      "license_file": "assets/fonts/OFL.txt",
+      "upstream_url": "https://raw.githubusercontent.com/google/fonts/main/ofl/bebasneue/BebasNeue-Regular.ttf",
+      "author": "The Bebas Neue Project Authors (Ryoichi Tsunekawa, Dharma Type)",
+      "sha256": "08e4623805102d819f58601e46e345648846075e363b2ceb23313c2d1c83ec73"
+    },
+    {
+      "name": "OFL.txt",
+      "path": "res://assets/fonts/OFL.txt",
+      "license": "OFL-1.1",
+      "upstream_url": "https://raw.githubusercontent.com/google/fonts/main/ofl/bebasneue/OFL.txt",
+      "sha256": "72082f6cb4d04be2ecf7cc7d9e1e7d73787f0af8a5a278a47cade70c16b78341"
+    }
+  ]
+}

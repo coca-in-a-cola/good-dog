@@ -161,8 +161,8 @@ func _light(at: Vector3, reach: float) -> void:
 func _build_route() -> void:
 	# Extend the accepted cell's corridor, removing only its temporary end cap.
 	$Geometry/CorridorEnd.free()
-	$Geometry/Floor.position.z = -9.0
-	$Geometry/Floor.size.z = 23.4
+	$Geometry/Floor.position.z = -8.95
+	$Geometry/Floor.size.z = 23.3
 	$Geometry/Ceiling.position.z = -9.0
 	$Geometry/Ceiling.size.z = 23.4
 	for side in [$Geometry/CorridorLeft, $Geometry/CorridorRight]:
@@ -200,6 +200,12 @@ func _build_route() -> void:
 	hole.height = 2
 	hole.sides = 64
 	floor_root.add_child(hole)
+	var connector_cutout := CSGBox3D.new()
+	connector_cutout.name = "ConnectorCutout"
+	connector_cutout.operation = CSGShape3D.OPERATION_SUBTRACTION
+	connector_cutout.position = Vector3(0, -0.1, -29.6)
+	connector_cutout.size = Vector3(2.5, 0.5, 2.2)
+	floor_root.add_child(connector_cutout)
 	for i in 64:
 		var angle := TAU * i / 64.0
 		# Leave the north entrance open (connector is a sealed throat).
