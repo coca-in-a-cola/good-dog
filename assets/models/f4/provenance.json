@@ -1,0 +1,19 @@
+{
+  "author": "ChatGPT artist <chatgpt@agents.mice.zone> (GOOD DOG contributors)",
+  "license": "MIT",
+  "license_file": "LICENSE",
+  "source": "tools/art/build_f4.py + revise_f4.py + revision2_mcp.py; stain_texture.py",
+  "revision": "2; representative art source checkpoint, not full F4",
+  "external_asset_imports": false,
+  "files": {
+    "tools/art/source/representative_slice.blend": "46ac28e1e385aafeabc8b415a0651093c6face23f9429aa769220d6ad3dac7d6",
+    "assets/models/f4/bent_stick.glb": "fc4fa88757dd18f07bbb3f228d2aa0a1cae2af8b5e98b394dfd32881d99e534e",
+    "assets/models/f4/cell_corridor.glb": "49abe5bdc370195b20c0b7f8c8b8ceaf9a629d5227b48454768e2154a197c624",
+    "assets/models/f4/placement_circle.glb": "c2b7db51ebe96a04869a3e4d38aa7623713206e45fc4b0ab7bb6b13b89725179",
+    "tools/art/build_f4.py": "5cef5617170562103eadef5cd288c6cbf1bd75bceb39828afd76f2e7874b7a33",
+    "tools/art/revise_f4.py": "67c1e98a483d327e769cd724968005097efdcd8af3ad3f9a5a9caa4a1e302a97",
+    "tools/art/revision2_mcp.py": "8b0ea90b2ec3de6da9143bccb88a657e18b76b7ba6507295a3ebdd574b5a1d36",
+    "tools/art/stain_texture.py": "aff02a7eb42e327871c66e8c53f2444d5e0008218961aa891282d8c2160ea22a",
+    "assets/models/f4/blood_pool.png": "fb3d3311399a6fcb595b0fe07d804518c5b3cfad5d108dac53e4104fe7188280"
+  }
+}
